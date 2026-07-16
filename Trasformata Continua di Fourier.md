@@ -196,7 +196,10 @@ I grafici che rappresentano queste quantità sono quindi i seguenti:
 <img class="" src="./images/tcf/exp-mono-tcf.png">
 
 
-Per rappresentare il valore dello spettro possiamo utilizzare ancora una volta la rappresentazione in _decibel_: &emsp; $\vert X(f)\vert _{dB} = 10 \cdot \log_{10}{\Bigl(\frac{\vert X(f)\vert ^2}{\vert (X(f_0)\vert ^2)}\Bigr)}$
+Per rappresentare il valore dello spettro possiamo utilizzare ancora una volta la rappresentazione in _decibel_: 
+$$
+	\vert X(f)\vert _{dB} = 10 \cdot \log_{10}{\Bigl(\frac{\vert X(f)\vert ^2}{\vert (X(f_0)\vert ^2)}\Bigr)}
+$$
 
 <div class="grid2">
 <div class="top">
@@ -325,16 +328,16 @@ I valori $F$ e $T$ possono essere scelti indipendentemente l'uno dall'altro, in 
 
 L'operazione di calcoo può essere scirtta in forma compatta attraverso l'utilizzo delle matrici:
 $$
-\Chi = \overbrace{\begin{bmatrix*}
+\Chi = \overbrace{\begin{bmatrix}
 	X(-\frac{K}{2}F) \\
 	\vdots \\
 	X(\frac{K}{2}F)
- \end{bmatrix*}}^{(2K+1)\times 1} =
- \underbrace{T\bold{F}}_{(2K+1)\times(2N+1)} \cdot \overbrace{\begin{bmatrix*}
+ \end{bmatrix}}^{(2K+1)\times 1} =
+ \underbrace{T\bold{F}}_{(2K+1)\times(2N+1)} \cdot \overbrace{\begin{bmatrix}
 	x(-\frac{N}{2}T)\\
 	\vdots \\
 	x(\frac{N}{2}T)
- \end{bmatrix*}}^{(2N+1)\times 1} = T\bold{Fx}
+ \end{bmatrix}}^{(2N+1)\times 1} = T\bold{Fx}
 $$
 
 Definendo la matrice $\bold{F}$ come:

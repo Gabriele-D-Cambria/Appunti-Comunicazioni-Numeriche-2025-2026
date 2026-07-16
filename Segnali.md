@@ -43,8 +43,8 @@ I segnali si dividono in due categorie:
 </div>
 
 Un segnale può essere modellato come **funzione di una o più variabili indipendenti**, come ad esempio:
-- _Elettrocardiogramma_: raccoglie la tensione attraverso elettrodi in funzione del tempo &emsp;	$x(t): \Reals \to \Reals$
-- _Luminosità di un pixel_ in un immagine in funzione della sua posizione &emsp; $z(p_1, p_2): \Reals^2 \to \Reals$
+- _Elettrocardiogramma_: raccoglie la tensione attraverso elettrodi in funzione del tempo &emsp;	$x(t): \R \to \R$
+- _Luminosità di un pixel_ in un immagine in funzione della sua posizione &emsp; $z(p_1, p_2): \R^2 \to \R$
 
 I segnali, aleatori o deterministici che siano, si distinguono ulteeriormente in base a come si propagano nel tempo in:
 - **Segnali a tempo continuo**: il segnale varia con _continuità_

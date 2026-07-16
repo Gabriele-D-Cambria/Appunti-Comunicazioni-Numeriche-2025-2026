@@ -49,7 +49,7 @@ Tale corrispondenza fra lo spazio $\Omega$ e l'asse reale è una **_variabile al
 
 È quindi possibile assegnare al generico evento $\Set{X(\omega\le a)}$ una probabilità $P(\cdot)$.
 
-Inoltre, **sono ancora eventi** tutti i sottoinsiemi di $\Reals$ che si ottengono come unione/intersezione di sottoinsiemi del tipo $\Set{X(\omega\le a)}$. Potremo quindi associare loro una _probabilità_.
+Inoltre, **sono ancora eventi** tutti i sottoinsiemi di $\R$ che si ottengono come unione/intersezione di sottoinsiemi del tipo $\Set{X(\omega\le a)}$. Potremo quindi associare loro una _probabilità_.
 
 In particolare definiamo un **evento**:
 $$
@@ -91,7 +91,7 @@ $$
 	\boxed{F_x(x) := P(\Set{X \le x})}
 $$
 
-L'esistenza della funzione di distribuzione $F_X(x),$ $\forall x \in \Reals$ è assicurata dalla definizione stessa di variabile aleatoria.
+L'esistenza della funzione di distribuzione $F_X(x),$ $\forall x \in \R$ è assicurata dalla definizione stessa di variabile aleatoria.
 
 La funzione di distribuzione rispetta le seguenti proprietà:
 - $0 \le F_X(x) \le 1$
@@ -341,9 +341,9 @@ $$
 
 Se $\Lambda < 1$, allora $\max{\bigl(p_X(k)\bigr)} = p_X(0)$
 </figcaption>
+</figure>
 </div>
 <div class="">
-</figure>
 <figure class="80">
 <img class="100" src="./images/probability/va-poisson-1.png">
 <figcaption>
@@ -977,7 +977,7 @@ $$
 
 Dove la somma è estesa sull'insieme &emsp; $G(y_1) = \Set{x_i : g(x_i) = y_1}$.
 
-Questo vale analogamente per tutti i termini della sommatoria, notando che $\Set{G(y_1), G(y_2), ..., G(y_n)}$ costituiscono una partizione di $\Reals$, si ottiene che $E(Y)$ può essere espressa coma:
+Questo vale analogamente per tutti i termini della sommatoria, notando che $\Set{G(y_1), G(y_2), ..., G(y_n)}$ costituiscono una partizione di $\R$, si ottiene che $E(Y)$ può essere espressa coma:
 $$
 \Large
 \boxed{
@@ -1011,17 +1011,9 @@ $$
 Otteniamo che:
 $$
 \begin{align*}
-
-\eta_X = \int_{-\infty}^{+\infty}{xf_X(x)\;dx} &= \int_{b}^a{\frac{x}{b-a}\;dx} = \dots = \frac{a+b}{2} 
-
-\\[1em]
-
-P_X = E(X^2) =  \int_{-\infty}^{+\infty}{x^2f_X(x)\;dx} &= \int_b^a{\frac{x^2}{b-a}\;dx} = \dots = \frac{a^2+ab+b^2}{3}
-
-\\[1em]
-
-\sigma_X^2 = P_X - \eta_X^2 &= \frac{a^2 + ab + b^2}{3} - \frac{(a+b)^2}{4} = \dots = \frac{(b-a)^2}{12}
-
+	\eta_X = \int_{-\infty}^{+\infty}{xf_X(x)\;dx} &= \int_{b}^a{\frac{x}{b-a}\;dx} = \dots = \frac{a+b}{2} \\[1em]
+	P_X = E(X^2) =  \int_{-\infty}^{+\infty}{x^2f_X(x)\;dx} &= \int_b^a{\frac{x^2}{b-a}\;dx} = \dots = \frac{a^2+ab+b^2}{3} \\[1em]
+	\sigma_X^2 = P_X - \eta_X^2 &= \frac{a^2 + ab + b^2}{3} - \frac{(a+b)^2}{4} = \dots = \frac{(b-a)^2}{12}
 \end{align*}
 $$
 

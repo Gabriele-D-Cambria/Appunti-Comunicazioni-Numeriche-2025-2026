@@ -233,7 +233,7 @@ Si definisce _**Codice A Blocco Lineare**_:
 > 	c = [c_1, c_2, ..., c_n] = bG = \sum_{i=1}^k{b_ig_i}
 > $$
 > 
-> Dove $G \in \Reals^{k\times n}$ si dice _**Matrice Generatrice del codice**_, e $g_i$ sono le $k$ righe della matrice.
+> Dove $G \in \R^{k\times n}$ si dice _**Matrice Generatrice del codice**_, e $g_i$ sono le $k$ righe della matrice.
 
 Questo tipo di codici a blocco godono delle seguenti proprietà:
 1. Ogni parola di codice è _combinazione lineare_ delle righe di $G$
@@ -277,7 +277,7 @@ $$
 	G = [I_k, P]
 $$
 
-Dove $P \in \Reals^{k \times (n - k)}$ è la **Matrice Di Parità**.
+Dove $P \in \R^{k \times (n - k)}$ è la **Matrice Di Parità**.
 
 Perciò:
 $$
