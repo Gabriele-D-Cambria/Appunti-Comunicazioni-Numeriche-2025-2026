@@ -212,7 +212,7 @@ Ponendo $t_1 = t_2 = t$:
 
 ## 2.4. Descrizione in Potenza
 
-IN molti casi, ci si accontenta di studiare un processo $X(t)$ analizzandone solamente la **funzione valor medio** e la **funzione di autocorrelazione**:
+In molti casi, ci si accontenta di studiare un processo $X(t)$ analizzandone solamente la **funzione valor medio** e la **funzione di autocorrelazione**:
 
 <div class="grid2">
 <div class="top">
@@ -339,8 +339,7 @@ La prima:
 > 	\begin{align*}
 > 		R_X(\tau) &= E\Set{X(t)X(t+\tau)} = E \Set{X(t'-\tau)X(t')} \\
 > 				  &= E\Set{X(t')X(t'-\tau)} = R_X(-\tau) \\[1em]
->
-> 		R_X(0) = E\Set{X^2(t)} = P_X \ge 0
+> 		R_X(0) &= E\Set{X^2(t)} = P_X \ge 0
 > 	\end{align*}
 > $$
 
@@ -349,7 +348,7 @@ Chiamiamo $R_X(0)$ _**Potenza Media Statistica** (istantanea)_ del processo $X(t
 La secinda proprietà:
 > L'`ACF` di un processo stazionario almeno in senso lato, assume **valore massimo nell'origine**
 > $$
-> 	|R_X(\tau)| \le R_X(0)
+> 	\vert R_X(\tau)\vert  \le R_X(0)
 > $$
 
 La dimostrazione è immediata:
@@ -359,7 +358,7 @@ $$
 	E\Set{X^2(t+\tau)} + E\Set{X^2(t)} \pm 2E\Set{X(t)X(t+\tau)} &\ge 0\\
 	2R_X(0) \pm 2R_X(\tau) &\ge 0 \\
 	\mp R_X(\tau) &\le R_X(0) \\
-	|R_X(\tau)| \le R_X(0)
+	\vert R_X(\tau)\vert  \le R_X(0)
 \end{align*}
 $$
 
@@ -524,7 +523,7 @@ Poiché $g(t)$ è un segnale reale, allora la sua trasformata gode della proprie
 $$
 \Large
 \boxed{
-	S_Y(f) = S_X(f)H(f)H^\ast(f) = S_X(f)|H(f)|^2
+	S_Y(f) = S_X(f)H(f)H^\ast(f) = S_X(f)\vert H(f)\vert ^2
 }
 $$
 
@@ -534,7 +533,7 @@ La relazione del filtraggio ci permette quindi di dimostrare che $S_X(f)$, defin
 
 Infatti, se filtriamo $X(t)$ con un **filtro Passa-Banda Ideale**, la potenza del processo di uscita $Y(t)$ può essere calcolata come:
 $$
-P_Y = \int{S_Y(f)\;df} = \int{S_X(f)|H(f)|^2\;df} = 2 \int_{\overline{f}-\Delta f/2}^{\overline{f}+\Delta f/2}{S_X(f)\;df}
+P_Y = \int{S_Y(f)\;df} = \int{S_X(f)\vert H(f)\vert ^2\;df} = 2 \int_{\overline{f}-\Delta f/2}^{\overline{f}+\Delta f/2}{S_X(f)\;df}
 $$
 
 <img class="" src="./images/probability/proc-aleat/densita-spettr-potenza-filtro-bp.png">

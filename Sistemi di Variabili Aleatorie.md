@@ -174,9 +174,9 @@ $$
 Questo coefficiente gode di tre proprietà principali:
 $$
 \begin{align*}
-c_{XY}^2 \le \sigma_X^2\sigma_Y^2 &\rArr |\rho_{XY}| \le 1 \\[1em]
+c_{XY}^2 \le \sigma_X^2\sigma_Y^2 &\rArr \vert \rho_{XY}\vert  \le 1 \\[1em]
 c_{XY} = 0 &\rArr rho_{XY} = 0 \\[1em]
-Y = aX + b &\rArr |\rho_{XY}| = 0 & a \ne 0
+Y = aX + b &\rArr \vert \rho_{XY}\vert  = 0 & a \ne 0
 \end{align*}
 $$
 

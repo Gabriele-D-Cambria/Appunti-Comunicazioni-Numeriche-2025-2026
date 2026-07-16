@@ -69,15 +69,15 @@ La _TCF_ si può applicare sia a $x(t) \in \R$ che a $x(t) \in \Complex$, e prod
 
 La funzione $X(f)$, tiicamente complessa, può quindi essere espressa in notazione polare, scomponendosi in:
 $$
-	X(f) = |X(f)|\cdot e^{j\phase{X(f)}}
+	X(f) = \vert X(f)\vert \cdot e^{j\phase{X(f)}}
 $$
 
-Chiamiamo $|X(f)|$ **_Spettro di Ampiezza_** e $\phase{X(f)}$ come **_Spettro di Fase_**. Queste quantità rappresentano ampiezza/fase delle componenti frequenziali in cui il segnale è scomposto.
+Chiamiamo $\vert X(f)\vert $ **_Spettro di Ampiezza_** e $\phase{X(f)}$ come **_Spettro di Fase_**. Queste quantità rappresentano ampiezza/fase delle componenti frequenziali in cui il segnale è scomposto.
 
 ## 2.1. Simmetria degli spettri per segnali reali
 
 Dato un segnale reale $x(t) \in \R$, la TCF gode delle seguenti proprietà:
-- **_Spettro di Ampiezza a simmetria pari_**: &emsp; $|X(-f)| = |X(f)|$
+- **_Spettro di Ampiezza a simmetria pari_**: &emsp; $\vert X(-f)\vert  = \vert X(f)\vert $
 - **_Spettro di Fase a simmetria dispari_**: &emsp; $\phase{X(-f)} = -\phase{X(f)}$
 
 La dimostrazioni di queste proprietà è relativamente semplice:
@@ -89,12 +89,12 @@ $$
 		X(f)^\ast &= \Biggl(\int{x(t)\cdot e^{-j2\pi ft} \; dt}\Biggr)^\ast \\
 		&= \int{x^\ast(t)\cdot e^{j2\pi ft} \; dt} \\
 		&= \int{x(t)\cdot e^{j2\pi ft} \; dt} \\
-		X(f)^\ast = |X(f)|\cdot e^{-j\phase{X(f)}} &= X(-f) \\
-		|X(f)|\cdot e^{-j\phase{X(f)}} &= |X(-f)|\cdot e^{j\phase{X(-f)}} \\
+		X(f)^\ast = \vert X(f)\vert \cdot e^{-j\phase{X(f)}} &= X(-f) \\
+		\vert X(f)\vert \cdot e^{-j\phase{X(f)}} &= \vert X(-f)\vert \cdot e^{j\phase{X(-f)}} \\
 	\end{align*} \\
 	@VVV \\
 	\begin{cases}
-		|X(f)| = |X(-f)| \\
+		\vert X(f)\vert  = \vert X(-f)\vert  \\
 		-\phase{X(f)} = \phase{X(-f)}
 	\end{cases}
 \end{CD}
@@ -133,9 +133,9 @@ Possiamo quindi procedere a disegnare il modulo e la fase della funzione cardina
 Riprendiamo la funzione rettangolare:
 $$
 x(t) = rect\Biggl(\frac{t}{T}\Biggr) = \begin{cases}
-		1 & |t| < \frac{T}{2} \\
-		\frac{1}{2} & |t| = \frac{T}{2} \\
-		0 & |t| > \frac{T}{2}
+		1 & \vert t\vert  < \frac{T}{2} \\
+		\frac{1}{2} & \vert t\vert  = \frac{T}{2} \\
+		0 & \vert t\vert  > \frac{T}{2}
 	\end{cases}
 $$
 
@@ -183,7 +183,7 @@ $$
 Per calcolarne il modulo ci basta fare il rapporto tra i moduli di numeratore e denominatore.
 
 $$
-|X(f)| = \frac{T}{\sqrt{1 + (f/f_T)^2}}
+\vert X(f)\vert  = \frac{T}{\sqrt{1 + (f/f_T)^2}}
 $$
 
 Per la fase invece ci basta fare la differenza delle fasi:
@@ -196,7 +196,7 @@ I grafici che rappresentano queste quantità sono quindi i seguenti:
 <img class="" src="./images/tcf/exp-mono-tcf.png">
 
 
-Per rappresentare il valore dello spettro possiamo utilizzare ancora una volta la rappresentazione in _decibel_: &emsp; $|X(f)|_{dB} = 10 \cdot \log_{10}{\Bigl(\frac{|X(f)|^2}{|(X(f_0)|^2)}\Bigr)}$
+Per rappresentare il valore dello spettro possiamo utilizzare ancora una volta la rappresentazione in _decibel_: &emsp; $\vert X(f)\vert _{dB} = 10 \cdot \log_{10}{\Bigl(\frac{\vert X(f)\vert ^2}{\vert (X(f_0)\vert ^2)}\Bigr)}$
 
 <div class="grid2">
 <div class="top">
@@ -224,27 +224,27 @@ Scala logaritmica
 Il **Teorema di Parseval** dice che:
 > L'energia di un segnale _nel tempo_ è **uguale** all'energia del segnale _in frequenza_
 > $$
-> 	E_x = \int{|x(t)|^2\;dt} = \int{|X(f)|^2\;df}
+> 	E_x = \int{\vert x(t)\vert ^2\;dt} = \int{\vert X(f)\vert ^2\;df}
 > $$
 
-Si definisce $\varepsilon_x(f) = |X(f)|^2$ come **_Densità Spettrale di Energia_**.
+Si definisce $\varepsilon_x(f) = \vert X(f)\vert ^2$ come **_Densità Spettrale di Energia_**.
 
 La dimostrazione è molto semplice:
 $$
 \begin{align*}
-	E_x &= \int{|x(t)|^2\;dt} \\
+	E_x &= \int{\vert x(t)\vert ^2\;dt} \\
 		&= \int{x(t) \cdot x^\ast(t)\;dt} \\
 		&= \int{x(t) \cdot \Biggl(\int_{-\infty}^{+\infty}{X(f)\cdot e^{j2\pi ft}\; df}\Biggr)^\ast\;dt} \\
 		&= \int{x(t) \cdot \Biggl(\int_{-\infty}^{+\infty}{X^\ast(f)\cdot e^{-j2\pi ft}\; df}\Biggr)\;dt} \\
 		&= \int_{-\infty}^{+\infty}{X^\ast(f) \cdot \Biggl(\int{x(t)\cdot e^{-j2\pi ft}\; dt}\Biggr)\;df} \\
 		&= \int_{-\infty}^{+\infty}{X^\ast(f) \cdot X(f)\;df} \\
-		&= \int{|X(f)|^2\;df} \\
+		&= \int{\vert X(f)\vert ^2\;df} \\
 \end{align*}
 $$
 
 Questa relazione ci aiuta a calcolare l'energia di funzioni nella frequenza, ad esempio:
 $$
-E_X = \int{|T\cdot \operatorname{sinc}(fT)|^2\;df} \Leftrightarrow \int{|rect(t/T)|^2\;dt} = T
+E_X = \int{\vert T\cdot \operatorname{sinc}(fT)\vert ^2\;df} \Leftrightarrow \int{\vert rect(t/T)\vert ^2\;dt} = T
 $$
 
 ## 2.4. Densità spettrale di potenza
@@ -252,15 +252,15 @@ $$
 Per i segnali a potenza mediafinita si ha che:
 $$
 \begin{align*}
-	P_x = \lim_{T \to \infty}{\frac{E_{x_T}}{T}} &= \lim_{T\to\infty}{\int{\frac{|X(f)|^2}{T}\;df}} \\
-	&= \int{\lim_{T\to\infty}{\frac{|X(f)|^2}{T}\;df}} \\
+	P_x = \lim_{T \to \infty}{\frac{E_{x_T}}{T}} &= \lim_{T\to\infty}{\int{\frac{\vert X(f)\vert ^2}{T}\;df}} \\
+	&= \int{\lim_{T\to\infty}{\frac{\vert X(f)\vert ^2}{T}\;df}} \\
 	&= \int{\cal{P}_\mathnormal{x(f)}\;df}
 \end{align*}
 $$
 
 Chiamiamo **Densità spettrale di potenza** la quantità 
 $$
-\cal{P}_\mathnormal{x(f)} := \mathnormal{\lim_{T\to\infty}{\frac{|X(f)|^2}{T}}}
+\cal{P}_\mathnormal{x(f)} := \mathnormal{\lim_{T\to\infty}{\frac{\vert X(f)\vert ^2}{T}}}
 $$
 
 
@@ -285,7 +285,7 @@ Sono dispositivi che ricevono in entrata un segnale analogico/digitale e restitu
 In particolare restituisce informazioni relative a:
 <div class="flexbox" markdown="1">
 
-|     Specifica      |             Cosa Indica             |
+|      Specifica      |             Cosa Indica             |
 | :----------------: | :---------------------------------: |
 |  Frequency range   |    Banda di frequenze misurabili    |
 |        RBW         | Capacità di separare segnali vicini |
@@ -462,7 +462,7 @@ $$
 
 L'energia del segnale $\operatorname{sinc}(2Bt)$ sarà quindi la stessa di $\frac{1}{2B} \cdot rect\Bigl(\frac{f}{2B}\Bigr)$ per il teorema di Parseval, ovvero:
 $$
-	E_x = \int_{-B}^{B}{\Biggl|\frac{1}{2B} \cdot rect\Biggl(\frac{f}{2B}\Biggr)\Biggr|^2\;df} = \frac{1}{4B^2} \cdot 2B = \frac{1}{2B}
+	E_x = \int_{-B}^{B}{\Biggl\vert \frac{1}{2B} \cdot rect\Biggl(\frac{f}{2B}\Biggr)\Biggr\vert ^2\;df} = \frac{1}{4B^2} \cdot 2B = \frac{1}{2B}
 $$
 
 #### 2.8.2.2. Esempio - Funzione Esponenziale
@@ -507,7 +507,7 @@ $$
 		\end{matrix}
 		@>>>
 		\begin{align*}
-			|Y(f)| &= |X(f)| \\
+			\vert Y(f)\vert  &= \vert X(f)\vert  \\
 			\phase{Y(f)} &= \phase{X(f)} - 2\pi ft_0
 		\end{align*}
 	\end{CD}
@@ -701,13 +701,13 @@ A questo punto dobbiamo distigguere iuattro casi:
 <div class="grid2">
 <div class="">
 
-Nel caso `a)` abbiamo che $|\nu| > 2B$. In questo caso quando $X(\nu) \ne 0$ allora $Y(f - \nu) = 0$ e viceversa.
+Nel caso `a)` abbiamo che $\vert \nu\vert  > 2B$. In questo caso quando $X(\nu) \ne 0$ allora $Y(f - \nu) = 0$ e viceversa.
 In questi intervalli avremo quindi che $Z(\nu) = 0$
 
 Successivamente studiamo il caso `b)` quando $-2B \le \nu < 0$.
 In questo caso avremo un prodotto $X(\nu) \cdot Y(f - \nu)$ che costruisce un rettangolo di altezza $\frac{1}{4B^2}$ e larghezza variabile con $\nu$:
 $$
-	l_b(\nu) = |-B - (\nu + B)| = |-\nu - 2B| = \nu + 2B
+	l_b(\nu) = \vert -B - (\nu + B)\vert  = \vert -\nu - 2B\vert  = \nu + 2B
 $$
 
 L'area totale sarà quindi: 
@@ -732,7 +732,7 @@ Il risultato sarà quindi:
 $$
 \begin{matrix}
 	Z(f) = \begin{cases}
-	0 & |f| \ge 2B \\
+	0 & \vert f\vert  \ge 2B \\
 	\frac{f}{4B^2} + \frac{1}{2B} & -2B < f \le 0 \\
 	-\frac{f}{4B^2} + \frac{1}{2B} & 0 < f < 2B \\
 \end{cases} & \Leftrightarrow & \frac{1}{2B} tri\Biggl(\frac{f}{4B}\Biggr)
@@ -777,9 +777,9 @@ La definizione più comune di banda è la **Banda a -3dB**:
 $$
 \begin{CD}
 	{
-		10 \log_{10}{\frac{|X(B_{-3dB}|^2)}{X(f_0)|^3}} \approx -3dB
+		10 \log_{10}{\frac{\vert X(B_{-3dB}\vert ^2)}{X(f_0)\vert ^3}} \approx -3dB
 	} @>>>
-	{\frac{|X(B_{-3dB}|^2)}{X(f_0)|^3} = \frac{1}{2}}
+	{\frac{\vert X(B_{-3dB}\vert ^2)}{X(f_0)\vert ^3} = \frac{1}{2}}
 \end{CD}
 $$
 
@@ -804,7 +804,7 @@ $$
 Otteniamo quindi:
 $$
 \begin{CD}
-	{|X(B_{-3dB})|^2 = \frac{T^2}{2}} \\
+	{\vert X(B_{-3dB})\vert ^2 = \frac{T^2}{2}} \\
 	@VVV \\
 	{\frac{T^2}{1+(f/f_T)^2} = \frac{T^2}{2}} \\
 	@VVV \\
@@ -833,7 +833,7 @@ $$
 
 La definizione di banda basata su criterio energetico è così definita:
 $$
-	\int_{-B_{99}}^{B_{99}}{|X(f)|^2\;df} = 0.99E_x = 0.99 \int{|X(f)|^2\;df}
+	\int_{-B_{99}}^{B_{99}}{\vert X(f)\vert ^2\;df} = 0.99E_x = 0.99 \int{\vert X(f)\vert ^2\;df}
 $$
 
 A differenza della banda a `-XdB`, questa definizione tiene in considerazione le caratteristiche del segnale originale.

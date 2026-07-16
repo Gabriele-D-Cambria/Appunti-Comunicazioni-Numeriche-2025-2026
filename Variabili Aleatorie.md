@@ -683,15 +683,15 @@ In generale possiamo seguire il seguente teorema:
 
 La probabilità che una variabile aleatoria gaussiana sia all'esterno di un intervallo centrato in $\eta$ di larghezza $n$ deviazioni standard $\sigma$ (che equivale alla radice positiva della _varianza_) segue la seguente relazione:
 $$
-P(|X - \eta| > n\sigma) = \int_{-\infty}^{\sigma - n\sigma}{f_X(\alpha)\;d\alpha} + \int_{\eta + n\sigma}^{+\infty}{f_X(\alpha)\;d\alpha} = 2Q(n) \qquad n = 1,2,3,...
+P(\vert X - \eta\vert  > n\sigma) = \int_{-\infty}^{\sigma - n\sigma}{f_X(\alpha)\;d\alpha} + \int_{\eta + n\sigma}^{+\infty}{f_X(\alpha)\;d\alpha} = 2Q(n) \qquad n = 1,2,3,...
 $$
 
 Alcuni valori sono:
 $$
 \begin{align*}
-	P(|X - \eta| > \sigma) &= 68.3\% \\
-	P(|X - \eta| > 2\sigma) &= 95.6\% \\
-	P(|X - \eta| > 3\sigma) &= 99.7\% \\
+	P(\vert X - \eta\vert  > \sigma) &= 68.3\% \\
+	P(\vert X - \eta\vert  > 2\sigma) &= 95.6\% \\
+	P(\vert X - \eta\vert  > 3\sigma) &= 99.7\% \\
 \end{align*}
 $$
 
@@ -726,7 +726,7 @@ $$
 \end{matrix}
 $$
 
-QUesto perché nel primo caso si comprende nell'integrazione l'impulso $P(X=b)\delta(x-b)$, mentre nel secondo lo si esclude.
+Questo perché nel primo caso si comprende nell'integrazione l'impulso $P(X=b)\delta(x-b)$, mentre nel secondo lo si esclude.
 
 ## 3.1. Variabili Aleatorie Miste
 
@@ -787,7 +787,7 @@ Questo metodo è applicabile a variabili aleatoria continue, discrete e miste. T
 
 Infatti, se $Y$ è una variabile aleatoria discreta che assume i valori $y_1, y_2, ..., y_i, ...$ è spesso conveniente determinare direttamente la massa di probabilità $P(Y = y_k)$.
 
-Se quindi anche la $X$ è una _variabile aleatoria discreta_, l'venento $\Set{g(X) = y_k}$ e l'unione di tutti gli eventi $\Set{X = x_i | g(x_i) = y_k}$.
+Se quindi anche la $X$ è una _variabile aleatoria discreta_, l'venento $\Set{g(X) = y_k}$ e l'unione di tutti gli eventi $\Set{X = x_i \vert  g(x_i) = y_k}$.
 Ponendo $G(y_k) = \set{x_i : g(x_i) = y_k}$:
 $$
 	p_Y(y_k) = P(Y = y_k) = \sum_{G(y_k)}{P(X = x_i)} = \sum_{G(y_k)}{p_X(x_i)}
@@ -837,7 +837,7 @@ $$
 
 Essendo $dy = g'(x)dx$ e $x = g^{-1}(y)$ $otteniamo quindi:
 $$
-	f_Y(y) = \frac{f_X(x)}{|g'(x)|}
+	f_Y(y) = \frac{f_X(x)}{\vert g'(x)\vert }
 $$
 
 Il valore assoluto è introdotto poiché la funzione $g(x)$ potrebbe essere **monotona decsrescente**, quindi con $g'(x) < 0$.
@@ -858,7 +858,7 @@ $$
 Essendo quindi $dy = g'(x_i) dx_i$ per $i = 1,2,3,...$, otteniamo il **_Teorema Fondamentale per la Trasformazione di una Variabile Aleatoria Continua_**:
 $$
 \Large
-\boxed{f_Y(y) = \sum_{i=1}^{K}{\frac{f_X(x_i)}{|g'(x_i)|}} \qquad \Set{x_i : g(x_i) = y}}
+\boxed{f_Y(y) = \sum_{i=1}^{K}{\frac{f_X(x_i)}{\vert g'(x_i)\vert }} \qquad \Set{x_i : g(x_i) = y}}
 $$
 
 Questa relazione ci fornisce anche un altra informazione.
@@ -1090,16 +1090,16 @@ $$
 Possiamo quindi utilizzare il teorema sulla distribuzione di probabilità nelle trasformazioni:
 $$
 \begin{matrix}
-f_X(x) = \sum_{i=1}^{K}{\frac{f_Z(z_i)}{|g'(z_i)|}} && z_i = g'(x)
+f_X(x) = \sum_{i=1}^{K}{\frac{f_Z(z_i)}{\vert g'(z_i)\vert }} && z_i = g'(x)
 \end{matrix}
 $$
 
-Poiché la trasformazione è **lineare monotona**, ovvero &emsp; $\forall x, \exist! z \;|\;f(z) = x$, possiamo riassumere il teorema:
+Poiché la trasformazione è **lineare monotona**, ovvero &emsp; $\forall x, \exist! z \;\vert \;f(z) = x$, possiamo riassumere il teorema:
 $$
 \begin{CD}
 	\underbrace{
 		\begin{matrix}
-			f_X(x) = \frac{f_Z(z_1)}{|g'(z_1)|} && z_1 = \frac{x - \eta_X}{\sigma_X}
+			f_X(x) = \frac{f_Z(z_1)}{\vert g'(z_1)\vert } && z_1 = \frac{x - \eta_X}{\sigma_X}
 		\end{matrix}
 	} \\
 	@VVV \\
@@ -1128,7 +1128,7 @@ $$
 $$
 \begin{CD}
 	\begin{matrix}
-  	P(|X-\eta_X| \ge k\sigma_X) \le \frac{1}{k^2} & \forall k > 1
+  	P(\vert X-\eta_X\vert  \ge k\sigma_X) \le \frac{1}{k^2} & \forall k > 1
 	\end{matrix} \\
 	@VVV \\
 	{
@@ -1151,7 +1151,7 @@ $$
 	} \\
 	@VVV \\
 	{
-		P(|X - \eta_X| \le \varepsilon) = P(\eta_X - \varepsilon \le X \le \eta_X + \varepsilon) \ge 1 - \frac{\sigma_X}{\varepsilon^2}
+		P(\vert X - \eta_X\vert  \le \varepsilon) = P(\eta_X - \varepsilon \le X \le \eta_X + \varepsilon) \ge 1 - \frac{\sigma_X}{\varepsilon^2}
 	}
 \end{CD}
 $$
@@ -1163,7 +1163,7 @@ Abbiamo messo quindi in evidenza che la probabilità che $X \in [\eta_X - \varep
 
 La **funzione di distribuzione** della variabile aleatoria $X$, condizionata all'evento $C$, è definita come:
 $$
-	F_{X|C}(x|C) = P(X \le x|C) = \frac{P(X \le x,C)}{P(C)}
+	F_{X\vert C}(x\vert C) = P(X \le x\vert C) = \frac{P(X \le x,C)}{P(C)}
 $$
 
 Dove l'evento $\Set{X \le x,C}$ rappresenta **tutti i punti dello spazio campione** per cui $\Set{X(\omega) \le x}$ e $\Set{\omega \in C}$, ovvero l'evento $\Set{X \le x} \cap C$.
@@ -1173,12 +1173,12 @@ $$
 \def\arraystretch{1.5}
 
 \begin{matrix}
-	0 \le F_{X|C} (x|C) \le 1 \\
-	P(x_1 < X \le x_2 | C) = F_{X|C}(x_2 | C) - F_{X|C}(x_1|C) \\
-	F_{X|C}(x_1|C) \le F_{X|C}(x_2|C) & x_1 < x_2 \\
-	F_{X|C}(-\infty | C) = 0 \\
-	F_{X|C}(\infty | C) = 1 \\
-	F_{X|C}(x^+|C) = F_{X|C}(x|C)
+	0 \le F_{X\vert C} (x\vert C) \le 1 \\
+	P(x_1 < X \le x_2 \vert  C) = F_{X\vert C}(x_2 \vert  C) - F_{X\vert C}(x_1\vert C) \\
+	F_{X\vert C}(x_1\vert C) \le F_{X\vert C}(x_2\vert C) & x_1 < x_2 \\
+	F_{X\vert C}(-\infty \vert  C) = 0 \\
+	F_{X\vert C}(\infty \vert  C) = 1 \\
+	F_{X\vert C}(x^+\vert C) = F_{X\vert C}(x\vert C)
 \end{matrix}
 $$
 
@@ -1208,7 +1208,7 @@ $$
 A questo punto possiamo calcolare la probabilità che, sapendo che la lampadina è accesa a $t_0$, qual è la probabilità che sia ancora accesa a $t_0 + \Delta_t$:
 $$
 \begin{align*}
-P(X > t_0 + \Delta t | X > t_0) &= \frac{P(X>t_0 + \Delta t) \cap (X > t_0)}{P(x>t_0)} \\
+P(X > t_0 + \Delta t \vert  X > t_0) &= \frac{P(X>t_0 + \Delta t) \cap (X > t_0)}{P(x>t_0)} \\
 								&= \frac{P(X>t_0 + \Delta t)}{P(x>t_0)} \\
 								&= \frac{e^{-(t_0 + \Delta t)/\lambda}}{e^{-t_0/\lambda}} \\
 								&= e^{\Delta t/\lambda} = P(X > \Delta t) \\

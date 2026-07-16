@@ -71,7 +71,7 @@ Noi identifichiamo quattro tipi di segnali:
 <div class="grid2">
 <div class="">
 
-PEr capire come un segnale può essere trasformato nelle varie tipologgie analizziamo cosa accade in un sistema di registrazione audio:
+Per capire come un segnale può essere trasformato nelle varie tipologgie analizziamo cosa accade in un sistema di registrazione audio:
 1. Un cantante genera un segnale analogico acustico $p(t)$
 2. Il microfono (attraverso il trasduttore) converte il suono in un segnale elettrico $v(t)$
 3. Un amplificatore amplifica il segnale in un nuovo segnale elettrico $x(t)$
@@ -131,12 +131,12 @@ $$
 
 Se estendiamo in maniera astratta la definizione di potenza ad un generico segnale $x(t)$, la _**Potenza Istantanea Normalizzata**_:
 $$
-	\boxed{P(t) = |x(t)|^2}
+	\boxed{P(t) = \vert x(t)\vert ^2}
 $$
 
 Analogamente, l'**_Energia Normalizzata_** assume la seguente forma:
 $$
-	\boxed{E = \int_{-\infty}^{+\infty}{P(t)\;dt} = \int{|x(t)|^2\;dt}}
+	\boxed{E = \int_{-\infty}^{+\infty}{P(t)\;dt} = \int{\vert x(t)\vert ^2\;dt}}
 $$
 
 ### 2.3.1. Esempio - Batteria Ideale
@@ -161,7 +161,7 @@ La definizione di energia è quindi mal posta, perché non porta a un risultato 
 Considerato un segnale $x(t)$ avente energia infinita, definiamo il **segnale troncato**:
 $$
 	x_T(t) = \begin{cases}
-		x(t) & |t| \le \frac{T}{2} \\
+		x(t) & \vert t\vert  \le \frac{T}{2} \\
 		0 & \text{altrove}
 	\end{cases}
 $$
@@ -171,13 +171,13 @@ Se calcolassimo l'energia del segnale troncato, risulta chiaro che sarà **finit
 Definiamo quindi la **_Potenza Media e l'Energia del segnale troncato nel tempo_**:
 $$
 \begin{matrix}
-	\boxed{P_{x_T} = \frac{E_{x_T}}{T}} & \boxed{E_{x_T} = \int{|x_T(t)|^2\;dt}}
+	\boxed{P_{x_T} = \frac{E_{x_T}}{T}} & \boxed{E_{x_T} = \int{\vert x_T(t)\vert ^2\;dt}}
 \end{matrix}
 $$
 
 La **Potenza media** di _un segnale qualunque_ sarà quindi:
 $$
-	P_x = \lim_{T \to \infty}{P_{x_T}} = \lim_{T\to\infty}{\frac{E_{x_T}}{T}} = \lim_{T\to\infty}{\frac{1}{T} \int_{-\frac{T}{2}}^{T \over 2}{|x(t)|^2\;dt}}
+	P_x = \lim_{T \to \infty}{P_{x_T}} = \lim_{T\to\infty}{\frac{E_{x_T}}{T}} = \lim_{T\to\infty}{\frac{1}{T} \int_{-\frac{T}{2}}^{T \over 2}{\vert x(t)\vert ^2\;dt}}
 $$
 
 Questa formulazione ci porta quindi a due deduzzioni:
@@ -210,7 +210,7 @@ $$
 
 Questo segnale ha $E_u = 0$, e potenza media:
 $$
-P_u = \lim_{T\to\infty}{\frac{1}{T} \int_{-{T\over 2}}^{T \over 2}{|u(t)|^2\;dt}} = \frac{1}{2}
+P_u = \lim_{T\to\infty}{\frac{1}{T} \int_{-{T\over 2}}^{T \over 2}{\vert u(t)\vert ^2\;dt}} = \frac{1}{2}
 $$
 
 </div>
@@ -236,7 +236,7 @@ $$
 Per questo segnale l'energia:
 $$
 \begin{align*}
-	E_x &= \int{|x(t)|^2\;dt} \\
+	E_x &= \int{\vert x(t)\vert ^2\;dt} \\
 	&= \int_0^{+\infty}{e^{-\frac{2t}{T}\;dt}} \\
 	E_x &= \frac{T}{2} < \infty
 \end{align*}
@@ -301,7 +301,7 @@ Alcuni esempi al variare della frequenza:
 
 <div class="flexbox" markdown="1">
 
-| frequenza $f_0$ | lunghezza d'onda $\lambda$ |
+|  frequenza $f_0$ | lunghezza d'onda $\lambda$ |
 | :-------------: | :------------------------: |
 |   $2.4\;Ghz$    |         $0.125\;m$         |
 |    $3\;Ghz$     |          $0.1\;m$          |
@@ -314,7 +314,7 @@ Alcuni esempi al variare della frequenza:
 
 Dato un generico segnale periodico $x(t) = x(t+T_0)$, definiamo la sua potenza media come:
 $$
-P_x = \frac{1}{T_0} \int_{-\frac{T_0}{2}}^{T_0 \over 2}{|x(t)|^2\;dt}
+P_x = \frac{1}{T_0} \int_{-\frac{T_0}{2}}^{T_0 \over 2}{\vert x(t)\vert ^2\;dt}
 $$
 
 ### 3.2.1. Esempio - Esponenziale Complesso
@@ -367,9 +367,9 @@ $$
 L'impulso rettangolare ha questa forma:
 $$
 	x(t) = rect\Biggl(\frac{t}{T}\Biggr) = \begin{cases}
-		1 & |t| < \frac{T}{2} \\
-		\frac{1}{2} & |t| = \frac{T}{2} \\
-		0 & |t| > \frac{T}{2}
+		1 & \vert t\vert  < \frac{T}{2} \\
+		\frac{1}{2} & \vert t\vert  = \frac{T}{2} \\
+		0 & \vert t\vert  > \frac{T}{2}
 	\end{cases}
 $$
 
@@ -403,7 +403,7 @@ $$
 
 Per un generico segnale $x(t)$ otteniamo:
 $$
-	P_{x,dB} = 10 \cdot \log_{10}{\Biggl(\frac{|x(t)|^2}{|x(t_0)|^2}\Biggr)}  \Leftrightarrow 20 \cdot \log_{10}{\Biggl(\frac{|x(t)|}{|x(t_0)|}\Biggr)}
+	P_{x,dB} = 10 \cdot \log_{10}{\Biggl(\frac{\vert x(t)\vert ^2}{\vert x(t_0)\vert ^2}\Biggr)}  \Leftrightarrow 20 \cdot \log_{10}{\Biggl(\frac{\vert x(t)\vert }{\vert x(t_0)\vert }\Biggr)}
 $$
 
 Poiché la potenza di riferimento è arbitrariamente scelta possiamo notare che:

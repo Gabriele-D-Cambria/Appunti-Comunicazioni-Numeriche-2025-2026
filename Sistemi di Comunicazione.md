@@ -705,7 +705,7 @@ $$
 \end{align*}
 $$
 
-Scelto quindi il filtro del trasmettitore come un **FIltro di Nyquist** $g_N$, il filtro del ricevitore dovrà avere, in frequenza, le seguenti caratteristiche:
+Scelto quindi il filtro del trasmettitore come un **Filtro di Nyquist** $g_N$, il filtro del ricevitore dovrà avere, in frequenza, le seguenti caratteristiche:
 $$
 \LARGE
 \boxed{
@@ -1097,7 +1097,7 @@ $$
 }
 $$
 
-CIò implica che, dal punto di vista spettrale, mappe di **ordine maggiore** _**sono più efficienti**_ <small>(occupano meno banda)</small>
+Ciò implica che, dal punto di vista spettrale, mappe di **ordine maggiore** _**sono più efficienti**_ <small>(occupano meno banda)</small>
 .
 Inoltre, se utilizzassimo un _rate_ $r$, poiché $0 < r \le 1$, l'efficienza spettrale _diminuisce_.
 

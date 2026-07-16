@@ -83,7 +83,7 @@ Gli oggetti che costituiscono un insieme sono detti **elementi dell'insieme**.
 - Scriviamo $x \in A$ se $x$ appartiene a $A$, altrimenti $x \not\in A$
 - Se $A$ è vuoto scriviamo $A = \emptyset$
 - Se $x_1, x_2, ..., x_n$ sono tutti elementi di $A$ indichiamo $A = \Set{x_1, x_2, ..., x_n}$
-- Se tutti gli elementi condividono una proprietà $A = \Set{x | 0 \le x \le 1}$
+- Se tutti gli elementi condividono una proprietà $A = \Set{x \vert  0 \le x \le 1}$
 - Se ogni elemento di $A$ è anche elemento di un insieme $B$: $A \subset B$
 - Esiste la proprietà transitiva: $C \subset B$, $B \subset A$ allora $C \subset A$
 - Se $A \subset B$ e $B \subset A$, allora gli insiemi si dicono **identici** e si scrive $A = B$
@@ -218,7 +218,7 @@ Secondo la **_definizione assiomatica di probabilità_**, per specificare in mod
 <img class="100" src="./images/probability/probability-space.png">
 <figcaption>
 
-UN singolo evento puù convolgere un singolo risultato o un sottoinsieme dei possibili risultati in $\Omega$
+Un singolo evento puù convolgere un singolo risultato o un sottoinsieme dei possibili risultati in $\Omega$
 </figcaption>
 </figure>
 
@@ -264,7 +264,7 @@ $$
 	P(C) = 1 - P(\overline{C}) = 1 - P(A \cap B)
 $$
 
-RIcaviamo quindi il valore di $P(A \cap B)$ dalla terza condizione:
+Ricaviamo quindi il valore di $P(A \cap B)$ dalla terza condizione:
 $$
 	P(A \cap B) = P(A) + P(B) - 0.98 = 0.95
 $$
@@ -348,25 +348,25 @@ L'ipotesi di equiprobabilità viene quindi fatta in base a considerazioni si _si
 
 Suppuniamo di eseguire un esperimento che coinvolga una coppia di eventi $A$ e $B$.
 
-Sia $P[A|B]$ la probabilita dell'evento $A$ dato che l'evento $B$ si è verificato, chiamata **_probabilità condizionata di $A$ dato $B$_**.
+Sia $P[A\vert B]$ la probabilita dell'evento $A$ dato che l'evento $B$ si è verificato, chiamata **_probabilità condizionata di $A$ dato $B$_**.
 
 Assumento che $B$ abbia una probabilità non nulla, allora:
 $$
-	P[A|B] = \frac{P[A \cap B]}{P[B]}
+	P[A\vert B] = \frac{P[A \cap B]}{P[B]}
 $$
 
 Questa probabilità condizionata cattura l'informazione parziale che il verificarsi dell'evento $B$ fornisce sull'evento $A$.
 
 La probabilità condizionata definisce quindi unn nuovo sistema di probabilità caratterizzato dallo **stesso spazio campione**, la **stessa classe di eventi** ma una **_diversa legge di probabilità_**.
 
-Fissato un evento $B$, $P[A|B]$  una legge di probabilità in quanto soddisfa gli assioni:
-1. **Normalizzazione**: considerando $\Omega$ come $A$ e notando che $\Omega \cap B = B$, allora possiamo dire che $P[\Omega | B] = \frac{P[\Omega \cup B]}{P[B]} = \frac{P[B]}{P[B]} = 1$
+Fissato un evento $B$, $P[A\vert B]$  una legge di probabilità in quanto soddisfa gli assioni:
+1. **Normalizzazione**: considerando $\Omega$ come $A$ e notando che $\Omega \cap B = B$, allora possiamo dire che $P[\Omega \vert  B] = \frac{P[\Omega \cup B]}{P[B]} = \frac{P[B]}{P[B]} = 1$
 2. **Non negatività**: soddifatta per la definizione
 3. **Additività** dati $A_1$ e $A_2$ disgiunti:
 
 $$
 \begin{align*}
-	P[A_1 \cup A_2 | B] = \frac{P[(A_1 \cup A_2) | B]}{P[B]} &= \frac{P[(A_1 \cap B) \cup (A_2 \cap B)]}{P[B]} \\
+	P[A_1 \cup A_2 \vert  B] = \frac{P[(A_1 \cup A_2) \vert  B]}{P[B]} &= \frac{P[(A_1 \cap B) \cup (A_2 \cap B)]}{P[B]} \\
 	&= \frac{P[A_1 \cap B] + P[A_2 \cap B]}{P[B]} \\
 	&= \frac{P[A_1 \cap B]}{P[B]} + \frac{P[A_2 \cap B]}{P[B]} \\
 
@@ -375,15 +375,15 @@ $$
 
 Se utilizzassimo l'interpretazione in termini di _frequenza relativa_, la probabilità condizionata sarebbe definita come:
 $$
-	P(A|B) = \frac{P(A \cap B)}{P(B)} \approx {\frac{n_{A \cap B}}{N} \over \frac{n_B}{N}} = \frac{n_{A \cap B}}{n_B}
+	P(A\vert B) = \frac{P(A \cap B)}{P(B)} \approx {\frac{n_{A \cap B}}{N} \over \frac{n_B}{N}} = \frac{n_{A \cap B}}{n_B}
 $$
 
-Se quindi consideriamo solo la sequenza degli $n_B$ risultato in cui si è verificato l'evento $B$, $P(A|B)$ approssima la frequenza di presentazione dell'evento $A$ in tale sequenza.
+Se quindi consideriamo solo la sequenza degli $n_B$ risultato in cui si è verificato l'evento $B$, $P(A\vert B)$ approssima la frequenza di presentazione dell'evento $A$ in tale sequenza.
 
 La probabilità condizionata ha diverse proprietà:
-1. $A \cap B = \emptyset \to P(A|B) = 0$
-2. $A \subset B \to A \cap B = A \to P(A|B) = \frac{P(A)}{P(B)} \ge P(A)$
-2. $B \subset A \to A \cap B = B \to P(A|B) = \frac{P(B)}{P(B)} = 1$
+1. $A \cap B = \emptyset \to P(A\vert B) = 0$
+2. $A \subset B \to A \cap B = A \to P(A\vert B) = \frac{P(A)}{P(B)} \ge P(A)$
+2. $B \subset A \to A \cap B = B \to P(A\vert B) = \frac{P(B)}{P(B)} = 1$
 
 ## 2.3. Teorema della probabilità totale
 
@@ -394,19 +394,19 @@ $$
 
 Da cui, per l'incopatibilità degli eventi $\Set{B \cap A_i}$:
 $$
-P(B) = P\Biggl(\bigcup_{i=1}^{K}{(B \cap A_i)}\Biggr) = \sum_{i=1}^K{P(B \cap A_i)} = \sum_{i=1}^K{P(B|A_i)P(A_i)}
+P(B) = P\Biggl(\bigcup_{i=1}^{K}{(B \cap A_i)}\Biggr) = \sum_{i=1}^K{P(B \cap A_i)} = \sum_{i=1}^K{P(B\vert A_i)P(A_i)}
 $$
 
 Questa relazione si chiama **_Teorema della probabilità totale_**:
 $$
 \boxed{
-	P(B) = \sum_{i=1}^K{P(B|A_i)P(A_i)}
+	P(B) = \sum_{i=1}^K{P(B\vert A_i)P(A_i)}
 }
 $$
 
-Questo teorema i permette di calcolare la probabilita di un evento $B$ a partire dalle probabilità condizionate $P(B|A_i)$ e dalle probabilità $P(A_i)$ degli eventi condizionati.
+Questo teorema i permette di calcolare la probabilita di un evento $B$ a partire dalle probabilità condizionate $P(B\vert A_i)$ e dalle probabilità $P(A_i)$ degli eventi condizionati.
 
-In altre parole, permette di calcolcare la probabilità di un **effetto** $\biggl(P(B)\biggr)$ a partire dalle probabilità di tutte le sue possibile **cause** $\bigl(P(A_i)\bigr)$ e dalle probabilità delle diverse combinazioni **causa/effetto** $\bigl(P(B|A_i)\bigr)$
+In altre parole, permette di calcolcare la probabilità di un **effetto** $\biggl(P(B)\biggr)$ a partire dalle probabilità di tutte le sue possibile **cause** $\bigl(P(A_i)\bigr)$ e dalle probabilità delle diverse combinazioni **causa/effetto** $\bigl(P(B\vert A_i)\bigr)$
 
 ### 2.3.1. Esempio
 
@@ -425,31 +425,31 @@ In altre parole, permette di calcolcare la probabilità di un **effetto** $\bigg
 Indicando con $D$ l'evento "il componente è difettoso", i dati sono:
 $$
 \begin{cases}
-	P(A_1) = 0.45  & P(D|A_1) = 0.08 \\
-	P(A_2) = 0.30 & P(D|A_2) = 0.06 \\
-	P(A_3) = 0.25 & P(D|A_3) = 0.05
+	P(A_1) = 0.45  & P(D\vert A_1) = 0.08 \\
+	P(A_2) = 0.30 & P(D\vert A_2) = 0.06 \\
+	P(A_3) = 0.25 & P(D\vert A_3) = 0.05
 \end{cases}
 $$
 
 Applicando il teorema possiamo quindi risolvere il problema:
 $$
-P(D) = \sum_{i=1}^{3}{P(D|A_i)P(A_i)} = 0.0665
+P(D) = \sum_{i=1}^{3}{P(D\vert A_i)P(A_i)} = 0.0665
 $$
 
 
 ## 2.4. Teorema di Bayes
 
-Il teorema di bayes ci dice come calcolare la probabilià $P(B|A)$ avendo note le probabilità $P(A), P(B), P(A|B)$ (con $P(A),P(B) \ne 0$)
+Il teorema di bayes ci dice come calcolare la probabilià $P(B\vert A)$ avendo note le probabilità $P(A), P(B), P(A\vert B)$ (con $P(A),P(B) \ne 0$)
 
 Infatti dalla definizione di probabilità condizionata possiamo dire che:
 $$
-	P[A|B]P[B] = P[A\cap B] = P(B \cap A) = P(B|A)P(A)
+	P[A\vert B]P[B] = P[A\cap B] = P(B \cap A) = P(B\vert A)P(A)
 $$
 
 Perciò otteniamo:
 $$
 \boxed{
-	P[B|A] = \frac{P[A|B]P[B]}{P[A]}
+	P[B\vert A] = \frac{P[A\vert B]P[B]}{P[A]}
 }
 $$
 
@@ -461,27 +461,27 @@ Dall'esercizio precedente abbiamo che:
 $$
 \begin{cases}
 	P(D) = 0.0665 \\
-	P(D|A_1) = 0.08 \\
+	P(D\vert A_1) = 0.08 \\
 	P(A_1) = 0.45
 \end{cases}
 $$
 
 Applicando il teorema di Bayes:
 $$
-	P(A_1 | D) = \frac{P(A_1)P(D|A_1)}{P(D)} = \frac{0.45 \cdot 0.08}{0.0665} \approx 0.54
+	P(A_1 \vert  D) = \frac{P(A_1)P(D\vert A_1)}{P(D)} = \frac{0.45 \cdot 0.08}{0.0665} \approx 0.54
 $$
 
 ## 2.5. Eventi Indipendenti
 
-Supponiamo che il verificarsi dell'evento $A$ non fornisca alcuna informazione sull'evento $B$, ovvero: &emsp; $P[B|A] = P[B]$
+Supponiamo che il verificarsi dell'evento $A$ non fornisca alcuna informazione sull'evento $B$, ovvero: &emsp; $P[B\vert A] = P[B]$
 
-Dal teorema di Bayas però abbiamo anche che: &emsp; $P[A|B] = \frac{P[B|A]P[A]}{P[B]} = \frac{\cancel{P[B]}\cdot P[A]}{\cancel{P[B]}} = P[A]$.
+Dal teorema di Bayas però abbiamo anche che: &emsp; $P[A\vert B] = \frac{P[B\vert A]P[A]}{P[B]} = \frac{\cancel{P[B]}\cdot P[A]}{\cancel{P[B]}} = P[A]$.
 
 In questo caso speciale, notiamo che _la conoscenza del verificarsi di uno dei due eventi non ci die nulla di più sula probabilitàà di verificarsi dell'altro evento_ rispetto a quanto non sapevamo prima.
 
 Eventi $A$ e $B$ che soddisfano questa condizione sono detti **_Eventi indipendenti_**.
 
-Sapendo quindi che $P[A|B] = \frac{P[A \cap B]}{P[B]}$, la condizione $P[A|B] = P[A]$ è equivalente a dire:
+Sapendo quindi che $P[A\vert B] = \frac{P[A \cap B]}{P[B]}$, la condizione $P[A\vert B] = P[A]$ è equivalente a dire:
 $$
 	\boxed{P[A\cap B] = P[A] \cdot P[B]}
 $$
@@ -563,8 +563,8 @@ Un eccezione è però rappresentata dagli **esperimenti indipendenti**, ovvero q
 
 Dati:
 - Uno spazio campione composto $\Omega = \Omega_1 \times \Omega_2$
-- Come eventi _tutti i sottoinsiemi_ di $\Omega$ del tipo $A = A_1 \times A_2 = \Set{(\xi, \lambda) | \xi \in A_1, \lambda = A_2}$
-- UNa funzione di probabilità $P(\cdot)$
+- Come eventi _tutti i sottoinsiemi_ di $\Omega$ del tipo $A = A_1 \times A_2 = \Set{(\xi, \lambda) \vert  \xi \in A_1, \lambda = A_2}$
+- Una funzione di probabilità $P(\cdot)$
 
 Possiamo osservare che:
 $$
@@ -725,15 +725,15 @@ $$
 	\begin{cases}
 	A & \text{Ottenere fiori nella prima estrazione}  \\
 	B & \text{Ottenere fiori nella seconda estrazione} \\
-	B|A & \text{Ottenere fiori dopo aver ottenuto fiori}
+	B\vert A & \text{Ottenere fiori dopo aver ottenuto fiori}
 \end{cases}	\\
 @VVV \\
 \begin{matrix}
-	P(A) = \frac{10}{40} = \frac{1}{4} & & P(B|A) = \frac{9}{39}
+	P(A) = \frac{10}{40} = \frac{1}{4} & & P(B\vert A) = \frac{9}{39}
 \end{matrix} \\
 @VVV \\
 {
-	P(A \cap B) = P(B|A)P(A) = \frac{9}{39} \cdot \frac{1}{4} = \frac{3}{52}
+	P(A \cap B) = P(B\vert A)P(A) = \frac{9}{39} \cdot \frac{1}{4} = \frac{3}{52}
 }
 \end{CD}
 $$
@@ -771,70 +771,70 @@ $$
 \end{matrix}
 $$
 
-Dobbiamo quindi calcolare la probabilità $P[T_0 | R_0]$.
+Dobbiamo quindi calcolare la probabilità $P[T_0 \vert  R_0]$.
 
-Per farlo dobbiamo analizzare le **probabilità di transizione**, ovvero la probabilità che un segnale $T_i$ generi un effetto $R_j$, ovvero calcolare: &emsp; $P(R_0|T_0), P(R_0|T_1), P(R_1|T_0), P(R_1|T_1)$
+Per farlo dobbiamo analizzare le **probabilità di transizione**, ovvero la probabilità che un segnale $T_i$ generi un effetto $R_j$, ovvero calcolare: &emsp; $P(R_0\vert T_0), P(R_0\vert T_1), P(R_1\vert T_0), P(R_1\vert T_1)$
 
 Possiamo infatti considerare l'esperimento trasmissione-ricezione come due esperimenti separati, ovvero la trasmissione di un simbolo e la ricezione di un simbpolo.
 
 Nel caso in cui si abbia $P_e = 0$ allora le probabilità sarebbero:
 $$
 \begin{align*}
-	P(R_0|T_0) &= (1-P_e) = 1 \\
-	P(R_0|T_1) &= P_e = 0 = 0 \\
-	P(R_1|T_0) &= P_e = 0 = 0 \\
-	P(R_1|T_1) &= (1-P_e) = 1 = 1
+	P(R_0\vert T_0) &= (1-P_e) = 1 \\
+	P(R_0\vert T_1) &= P_e = 0 = 0 \\
+	P(R_1\vert T_0) &= P_e = 0 = 0 \\
+	P(R_1\vert T_1) &= (1-P_e) = 1 = 1
 \end{align*}
 $$
 
 La probabilità di ricevere $R_0$ è quindi:
 $$
-	P(R_0) = P(R_0 | T_0)\cdot P(T_0) + P(R_0|T_1)\cdot P(T_1) = 1 \cdot 0.7 + 0 \cdot 0.3 = 0.7
+	P(R_0) = P(R_0 \vert  T_0)\cdot P(T_0) + P(R_0\vert T_1)\cdot P(T_1) = 1 \cdot 0.7 + 0 \cdot 0.3 = 0.7
 $$
 
-La probabilità $P(T_0|R_0)$ di conseguenza:
+La probabilità $P(T_0\vert R_0)$ di conseguenza:
 $$
-P(T_0|R_0) = \frac{P(R_0|T_0)\cdot P(T_0)}{P(R_0)} = \frac{1 \cdot 0.7}{0.7} = 1
+P(T_0\vert R_0) = \frac{P(R_0\vert T_0)\cdot P(T_0)}{P(R_0)} = \frac{1 \cdot 0.7}{0.7} = 1
 $$
 
 Nel caso descritto quindi abbiamo $P_e = 0.01$:
 $$
 \begin{align*}
-	P(R_0|T_0) &= (1-P_e) = 0.99 \\
-	P(R_0|T_1) &= P_e = 0.01 \\
-	P(R_1|T_0) &= P_e = 0.01 \\
-	P(R_1|T_1) &= (1-P_e) = 0.99
+	P(R_0\vert T_0) &= (1-P_e) = 0.99 \\
+	P(R_0\vert T_1) &= P_e = 0.01 \\
+	P(R_1\vert T_0) &= P_e = 0.01 \\
+	P(R_1\vert T_1) &= (1-P_e) = 0.99
 \end{align*}
 $$
 
 La probabilità di ricevere $R_0$ è quindi:
 $$
-	P(R_0) = P(R_0 | T_0)\cdot P(T_0) + P(R_0|T_1)\cdot P(T_1) = 0.99 \cdot 0.7 + 0.01 \cdot 0.3 = 0.696
+	P(R_0) = P(R_0 \vert  T_0)\cdot P(T_0) + P(R_0\vert T_1)\cdot P(T_1) = 0.99 \cdot 0.7 + 0.01 \cdot 0.3 = 0.696
 $$
 
-La probabilità $P(T_0|R_0)$ di conseguenza:
+La probabilità $P(T_0\vert R_0)$ di conseguenza:
 $$
-P(T_0|R_0) = \frac{P(R_0|T_0)\cdot P(T_0)}{P(R_0)} = \frac{0.99 \cdot 0.7}{0.696} = 0.996
+P(T_0\vert R_0) = \frac{P(R_0\vert T_0)\cdot P(T_0)}{P(R_0)} = \frac{0.99 \cdot 0.7}{0.696} = 0.996
 $$
 
 Se avessimo addirittura $P_e = 0.5$:
 $$
 \begin{align*}
-	P(R_0|T_0) &= (1-P_e) = 0.5 \\
-	P(R_0|T_1) &= P_e = 0.5 \\
-	P(R_1|T_0) &= P_e = 0.5 \\
-	P(R_1|T_1) &= (1-P_e) = 0.5
+	P(R_0\vert T_0) &= (1-P_e) = 0.5 \\
+	P(R_0\vert T_1) &= P_e = 0.5 \\
+	P(R_1\vert T_0) &= P_e = 0.5 \\
+	P(R_1\vert T_1) &= (1-P_e) = 0.5
 \end{align*}
 $$
 
 La probabilità di ricevere $R_0$ è quindi:
 $$
-	P(R_0) = P(R_0 | T_0)\cdot P(T_0) + P(R_0|T_1)\cdot P(T_1) = 0.5 \cdot 0.7 + 0.5 \cdot 0.3 = 0.5
+	P(R_0) = P(R_0 \vert  T_0)\cdot P(T_0) + P(R_0\vert T_1)\cdot P(T_1) = 0.5 \cdot 0.7 + 0.5 \cdot 0.3 = 0.5
 $$
 
-La probabilità $P(T_0|R_0)$ di conseguenza:
+La probabilità $P(T_0\vert R_0)$ di conseguenza:
 $$
-	P(T_0|R_0) = \frac{P(R_0|T_0)\cdot P(T_0)}{P(R_0)} = \frac{0.5 \cdot 0.7}{0.5} = 0.7 = P(T_0)
+	P(T_0\vert R_0) = \frac{P(R_0\vert T_0)\cdot P(T_0)}{P(R_0)} = \frac{0.5 \cdot 0.7}{0.5} = 0.7 = P(T_0)
 $$
 
 Quest'ultima casistica è la peggiore, in quanto ci dice che la probabilità di ricevere un bit **_è indipendente da quello che è stato mandato_**.

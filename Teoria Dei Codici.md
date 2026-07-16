@@ -474,8 +474,8 @@ Quest'ipotesi è molto forte, in quanto quando facciamo un errore su un bit è m
 La singola probabilità $P(y_l \vert x_l)$ può assumere due valori:
 $$
 P(y_l \vert x_l) = \begin{cases}
-	1 - p & P(y_l = x_l | x_l) \\
-	p & P(y_l \ne x_l | x_l)
+	1 - p & P(y_l = x_l \vert  x_l) \\
+	p & P(y_l \ne x_l \vert  x_l)
 \end{cases}
 $$
 

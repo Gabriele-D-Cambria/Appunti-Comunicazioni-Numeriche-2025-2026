@@ -90,7 +90,7 @@ Per riuscire a trasmettere i segnali senza che questi facciano interferenza tra 
 ## 3.5. Spettro delle Frequenze Radio
 
 I sistemi di comunicazioni radio operano nello spettro di comunicazioni che va da $3 Hz$ ai $300 GHz$.
-La fisica non ci impedisce di utilizzare frequenze maggiori a $300GHz$, tuttavia a quelle frequenze le lunghezze d'onda delle trasmissioni sono paragonabili a quelle degli ostacoli fisici che incontrano. QUando queste due dimensioni sono nello stesso ordine di grandezza, l'onda non riesce a propagarsi attraverso l'ostacolo, ma piuttosto vi rimbalza.
+La fisica non ci impedisce di utilizzare frequenze maggiori a $300GHz$, tuttavia a quelle frequenze le lunghezze d'onda delle trasmissioni sono paragonabili a quelle degli ostacoli fisici che incontrano. Quando queste due dimensioni sono nello stesso ordine di grandezza, l'onda non riesce a propagarsi attraverso l'ostacolo, ma piuttosto vi rimbalza.
 
 - I sistemi WiFi comunicano nelle frequenze dei $2.4GHz$, $5.1GHz$.
 - I sistemi cellulari comunicano invece nelle frequenze sotto i $6GHz$.
