@@ -53,10 +53,10 @@ Il **Mappatore**:
 > È un dispositivo che **mappa i bit su dei simboli**. L'insieme dei simboli $\Set{a_i}$ appartengono ad un _**alfabeto**_, che ha tipicamente cardinalità _potenza di 2_.
 >
 > $$
-> \Set{a_i} \in M \qquad #M = 2^Q
+> \Set{a_i} \in M \qquad \#M = 2^Q
 > $$
 
-<img class="" src="./images/comm-sys/mapper.png">
+<img class="25" src="./images/comm-sys/mapper.png">
 
 Un esempio di _mappa binaria_, mappa i bit su due simboli, ad esempio:
 
@@ -72,7 +72,7 @@ Una mappa _a quattro livelli_, mappa le coppie di bit su quattro simboli, ad ese
 
 Per generare un simbolo il mappatore necessita di $Q$, perciò possiamo dire che:
 $$
- T_S = Q \cdot T_d = \log_2{(M)} \cdot T_d\;[]
+	T_S = Q \cdot T_d = \log_2{(M)} \cdot T_d
 $$
 
 Ovviamente possiamo ricavare il _rate_:
@@ -979,7 +979,7 @@ $$
 					&= \beta \frac{\sigma_a^2}{N_0} \cdot \vert G_T(f) \vert^2 \\
 					&= \beta \frac{\sigma_a^2}{N_0} \cdot 1 \\
 				    &= \beta \frac{M^2 - 1}{3} \frac{1}{N_0} \\
-					&\Downarrow
+					&\Downarrow \\
 	N_0 &= \beta \cdot \frac{M^2 - 1}{3} \frac{1}{\frac{E_R}{N_0}}
 \end{align*}
 $$
@@ -1038,7 +1038,7 @@ In particolare:
 $$
 \begin{align*}
 	P_{M}(e) &= P_{M'}(e) \\
-	Q\Biggl(\sqrt{\frac{6}{M^2-1} \cdot \frac{E_R}{N_0}}) &= Q\Biggl(\sqrt{\frac{6}{M'^2-1} \cdot \frac{E_R'}{N_0}}) \\
+	Q\Biggl(\sqrt{\frac{6}{M^2-1} \cdot \frac{E_R}{N_0}}\Biggl) &= Q\Biggl(\sqrt{\frac{6}{M'^2-1} \cdot \frac{E_R'}{N_0}}\Biggl) \\
 	\sqrt{\frac{6}{M^2-1} \cdot \frac{E_R}{N_0}} &= \sqrt{\frac{6}{M'^2-1} \cdot \frac{E_R'}{N_0}} \\
 	\frac{6}{M^2-1} \cdot \frac{E_R}{N_0} &= \frac{6}{M'^2-1} \cdot \frac{E_R'}{N_0} \\
 	\frac{E_R'}{N_0} &= \frac{M'^2 - 1}{M^2 - 1} \cdot \frac{E_R}{N_0}
@@ -1098,7 +1098,6 @@ $$
 $$
 
 Ciò implica che, dal punto di vista spettrale, mappe di **ordine maggiore** _**sono più efficienti**_ <small>(occupano meno banda)</small>
-.
 Inoltre, se utilizzassimo un _rate_ $r$, poiché $0 < r \le 1$, l'efficienza spettrale _diminuisce_.
 
 # 4. Sistemi di Comunicazione in Banda Passante
@@ -1529,7 +1528,7 @@ $$
 
 Otteniamo:
 $$
-\Large 
+\Large
 \boxed{
 	P(e) = Q\Biggl(\sqrt{\frac{E_S}{N_0}}\Biggr)
 }
@@ -1596,7 +1595,7 @@ $$
 
 La _**Probabilità di Errore nelle `16-QAM`**_:
 $$
-\Large 
+\Large
 \boxed{
 	P(e) = 3 Q\Biggl(\sqrt{\frac{1}{5} \frac{E_S}{\sqrt{N_0}}}\Biggr)
 }

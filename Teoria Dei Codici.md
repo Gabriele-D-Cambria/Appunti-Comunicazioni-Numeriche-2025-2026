@@ -162,7 +162,7 @@ $$
 \begin{align*}
 	P_{e,c} &= \sum_{t = \frac{n + 1}{2}}^n{\binom{n}{t}p_{e,b}^t(1-p_{e,b})^{n-t}} \\
 			&= \binom{n}{\frac{n+1}{2}}{p_{e,b}^{\frac{n+1}{2}}(1-p_{e,b})^{\frac{n-1}{2}}} + \sum_{t = \frac{n + 3}{2}}^n{\binom{n}{t}p_{e,b}^t(1-p_{e,b})^{n-t}} \\
-			&\approx \binom{n}{\frac{n+1}{2}}{p_{e,b}^{\frac{n+1}{2}}(1-p_{e,b})^{\frac{n-1}{2}}} && p_{e,b}\text{ è un valore molto picolo quindi possiamo approssimare al valore più significativo}\\[1.3em]	
+			&\approx \binom{n}{\frac{n+1}{2}}{p_{e,b}^{\frac{n+1}{2}}(1-p_{e,b})^{\frac{n-1}{2}}} && p_{e,b}\text{ è un valore molto picolo quindi possiamo approssimare al valore più significativo}\\[1.3em]
 			&\approx \binom{n}{\frac{n+1}{2}}p_{e,b}^{\frac{n+1}{2}} && \text{Omettiamo gli eventi meno probabili}
 \end{align*}
 $$
@@ -171,7 +171,7 @@ Ad esempio, con $R = \frac{1}{3}$ abbiamo $n = 3$ e di conseguenza $\frac{n+1}{2
 $$
 \begin{align*}
 	P_{e,c} &= \sum_{t = 2}^{3}{\binom{3}{t}p^t_{e,b}(1-p_{e,b})^{3-t}} \\
-			&= 3p_{e,b}^2(1-p_{e,b}) + p_{e,b}^3 \\ 
+			&= 3p_{e,b}^2(1-p_{e,b}) + p_{e,b}^3 \\
 			&\approx 3p_{e,b}^2(1-p_{e,b}) \approx 3p_{e,b}^2
 \end{align*}
 $$
@@ -232,7 +232,7 @@ Si definisce _**Codice A Blocco Lineare**_:
 > $$
 > 	c = [c_1, c_2, ..., c_n] = bG = \sum_{i=1}^k{b_ig_i}
 > $$
-> 
+>
 > Dove $G \in \R^{k\times n}$ si dice _**Matrice Generatrice del codice**_, e $g_i$ sono le $k$ righe della matrice.
 
 Questo tipo di codici a blocco godono delle seguenti proprietà:
@@ -313,7 +313,7 @@ G = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-Il codice a ripetizione è quindi 
+Il codice a ripetizione è quindi
 
 La distanza minima sarà $d_{min} = 3$
 

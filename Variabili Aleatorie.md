@@ -1086,7 +1086,7 @@ f_X(x) = \sum_{i=1}^{K}{\frac{f_Z(z_i)}{\vert g'(z_i)\vert }} && z_i = g'(x)
 \end{matrix}
 $$
 
-Poiché la trasformazione è **lineare monotona**, ovvero &emsp; $\forall x, \exist! z \;\vert \;f(z) = x$, possiamo riassumere il teorema:
+Poiché la trasformazione è **lineare monotona**, ovvero &emsp; $\forall x, \exists ! z \;\vert \;f(z) = x$, possiamo riassumere il teorema:
 $$
 \begin{CD}
 	\underbrace{

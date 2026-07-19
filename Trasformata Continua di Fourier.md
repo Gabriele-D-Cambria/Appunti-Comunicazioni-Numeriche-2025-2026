@@ -196,7 +196,7 @@ I grafici che rappresentano queste quantità sono quindi i seguenti:
 <img class="" src="./images/tcf/exp-mono-tcf.png">
 
 
-Per rappresentare il valore dello spettro possiamo utilizzare ancora una volta la rappresentazione in _decibel_: 
+Per rappresentare il valore dello spettro possiamo utilizzare ancora una volta la rappresentazione in _decibel_:
 $$
 	\vert X(f)\vert _{dB} = 10 \cdot \log_{10}{\Bigl(\frac{\vert X(f)\vert ^2}{\vert (X(f_0)\vert ^2)}\Bigr)}
 $$
@@ -261,7 +261,7 @@ $$
 \end{align*}
 $$
 
-Chiamiamo **Densità spettrale di potenza** la quantità 
+Chiamiamo **Densità spettrale di potenza** la quantità
 $$
 \cal{P}_\mathnormal{x(f)} := \mathnormal{\lim_{T\to\infty}{\frac{\vert X(f)\vert ^2}{T}}}
 $$
@@ -522,6 +522,7 @@ Quello che ne deduciamo quindi è che un ritardo temporale:
 - **Mantiene invariato** lo spettro di ampiezza
 
 La dimostrazione è banale:
+
 $$
 \begin{CD}
 	\int_{-\infty}^{+\infty}{x(t-t_0)\cdot e^{-j2\pi ft}\;dt} \\
@@ -532,7 +533,6 @@ $$
 	@VVV \\
 	e^{-j2\pi ft_0} \cdot X(f)
 \end{CD}
-	
 $$
 
 Ad esempio, se studiassimo la funzione rettangolare traslata:
@@ -561,7 +561,7 @@ $$
 @V{cos(\alpha) = \frac{e^{j\alpha} + e^{-j\alpha}}{2}}VV \\
 \end{CD} \\
 {\int{x(t) \cdot \frac{e^{j2\pi f_0t} + e^{-j2\pi f_0t}}{2}\cdot e^{-j2\pi ft}\; dt}} \\
-\frac{1}{2} \Biggl( 
+\frac{1}{2} \Biggl(
 	\int{x(t) \cdot e^{-j2\pi (f-f_0)t}\;dt} + \int{x(t) \cdot e^{-j2\pi (f+f_0)t}\;dt}
 \Biggr) \\
 \frac{X(f-f_0) + X(f+f_0)}{2}
@@ -713,14 +713,14 @@ $$
 	l_b(\nu) = \vert -B - (\nu + B)\vert  = \vert -\nu - 2B\vert  = \nu + 2B
 $$
 
-L'area totale sarà quindi: 
+L'area totale sarà quindi:
 $$
 	Z_b(\nu) = \frac{1}{4B^2} (\nu + 2B) = \frac{\nu}{4B^2} + \frac{1}{2B}
 $$
 
 Il caso `c)` identifica la sovrapposizione massima, nella quale $Z_c(\nu) = 2B \cdot \frac{1}{4B^2} = \frac{1}{2B}$
 
-Il caso `d)` è il simmetrico rispetto al caso `b)`, dove adesso avremo: 
+Il caso `d)` è il simmetrico rispetto al caso `b)`, dove adesso avremo:
 $$
 	Z_d(\nu) = \frac{1}{4B^2} (-\nu + 2B) = -\frac{\nu}{4B^2} + \frac{1}{2B}
 $$
