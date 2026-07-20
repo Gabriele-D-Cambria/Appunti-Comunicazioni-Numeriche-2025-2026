@@ -274,14 +274,16 @@ $$
 
 Se i due sistemi operano in parallelo allora abbiamo che:
 $$
-\begin{align*}
-y(t) &= h_1(t) \otimes x(t) + h_2(t) \otimes x(t)  \\
-	&= \bigl(h_1(t) + h_2(t)\bigr) \otimes x(t)
-\end{align*} \\[0.5em]
-\Updownarrow \\[0.5em]
-\begin{align*}
-	Y(f) &= \bigl(H_1(f) + H_2(f)\bigr) \cdot X(f)
-\end{align*}
+\begin{CD}
+	\begin{aligned}
+	y(t) &= h_1(t) \otimes x(t) + h_2(t) \otimes x(t)  \\
+		 &= \bigl(h_1(t) + h_2(t)\bigr) \otimes x(t)
+	\end{aligned} \\
+	@VVV \\
+	\begin{aligned}
+		Y(f) &= \bigl(H_1(f) + H_2(f)\bigr) \cdot X(f)
+	\end{aligned}
+\end{CD}
 $$
 </div>
 <div class="">

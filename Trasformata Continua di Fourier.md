@@ -780,9 +780,9 @@ La definizione più comune di banda è la **Banda a -3dB**:
 $$
 \begin{CD}
 	{
-		10 \log_{10}{\frac{\vert X(B_{-3dB}\vert ^2)}{X(f_0)\vert ^3}} \approx -3dB
+		10 \log_{10}{\frac{\vert X(B_{-3dB})\vert ^2}{\vert X(f_0)\vert ^2}} \approx -3dB
 	} @>>>
-	{\frac{\vert X(B_{-3dB}\vert ^2)}{X(f_0)\vert ^3} = \frac{1}{2}}
+	{\frac{\vert X(B_{-3dB})\vert ^2}{\vert X(f_0)\vert ^2} = \frac{1}{2}}
 \end{CD}
 $$
 
