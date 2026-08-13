@@ -998,6 +998,9 @@ $$
 
 ## 5.6. Indici di Variabili Aleatorie Notevoli
 
+<div class="grid3">
+<div class="top">
+
 ### 5.6.1. Variabile Aleatoria Uniforme
 
 Data $X\in U(a,b)$:
@@ -1017,7 +1020,12 @@ $$
 \end{align*}
 $$
 
+</div>
+<div class="top">
+
 ### 5.6.2. Variabile Esponenziale
+
+Data $X \in Exp(\lambda)$, otteniamo che:
 
 $$
 \begin{align*}
@@ -1034,7 +1042,12 @@ P_X = E(X^2) =  \int_{-\infty}^{+\infty}{x^2f_X(x)\;dx} &= \dots = 2\lambda^2
 \end{align*}
 $$
 
+</div>
+<div class="">
+
 ### 5.6.3. Variabile di Poisson
+
+Data $X \in P(\Lambda)$, otteniamo che:
 
 $$
 \begin{align*}
@@ -1050,6 +1063,9 @@ P_X = E(X^2) =  \int_{-\infty}^{+\infty}{x^2f_X(x)\;dx} &= 2\Lambda^2
 \sigma_X^2 = P_X - \eta_X^2 &= \Lambda
 \end{align*}
 $$
+
+</div>
+</div>
 
 ### 5.6.4. Variabile Gaussiana
 
@@ -1160,14 +1176,12 @@ Dove l'evento $\Set{X \le x,C}$ rappresenta **tutti i punti dello spazio campion
 
 Queste variabili godono delle seguenti proprietà:
 $$
-\def\arraystretch{1.5}
-
 \begin{matrix}
-	0 \le F_{X\vert C} (x\vert C) \le 1 \\
-	P(x_1 < X \le x_2 \vert  C) = F_{X\vert C}(x_2 \vert  C) - F_{X\vert C}(x_1\vert C) \\
-	F_{X\vert C}(x_1\vert C) \le F_{X\vert C}(x_2\vert C) & x_1 < x_2 \\
-	F_{X\vert C}(-\infty \vert  C) = 0 \\
-	F_{X\vert C}(\infty \vert  C) = 1 \\
+	0 \le F_{X\vert C} (x\vert C) \le 1 \\[1em]
+	P(x_1 < X \le x_2 \vert  C) = F_{X\vert C}(x_2 \vert  C) - F_{X\vert C}(x_1\vert C) \\[1em]
+	F_{X\vert C}(x_1\vert C) \le F_{X\vert C}(x_2\vert C) & x_1 < x_2 \\[1em]
+	F_{X\vert C}(-\infty \vert  C) = 0 \\[1em]
+	F_{X\vert C}(\infty \vert  C) = 1 \\[1em]
 	F_{X\vert C}(x^+\vert C) = F_{X\vert C}(x\vert C)
 \end{matrix}
 $$

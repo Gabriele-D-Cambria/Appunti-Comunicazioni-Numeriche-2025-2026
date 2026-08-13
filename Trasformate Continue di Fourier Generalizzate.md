@@ -110,7 +110,7 @@ $$
 ## 2.2. Esercizio - TCFG della funzione gradino
 
 > Data la funzione gradino $u(t)$ calcola la sua TCFG
-> 
+>
 > Suggerimenti:
 > 1. $u(t) = \frac{1}{2} + \frac{1}{2}\operatorname{sgn}(t)$
 > 2. $\frac{1}{t} \Leftrightarrow -j\pi \operatorname{sgn}(t)$
@@ -123,7 +123,7 @@ $$
 \end{matrix}
 $$
 
-Svolgendo il prodotto di convoluzione, che corrisponde alla funzione calcolata in $f-0$:
+Svolgendo il prodotto di convoluzione:
 $$
 U(f) = \frac{1}{2}\delta(f) - \frac{1}{j2\pi f}
 $$

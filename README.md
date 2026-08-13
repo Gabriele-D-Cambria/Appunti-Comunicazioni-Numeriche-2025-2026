@@ -53,10 +53,6 @@ Il secondo modulo, tenuto da Andriolli, tratta:
 
 ## 📖 Ordine di Studio Teoria Consigliato
 
-<div class="alert">
-Gli appunti non sono terminati e potrebbero avere errori e/o potrebbero mancare delle immagini.
-</div>
-
 **Probabilità** (_Andriolli_):
 1. [Teoria della Probabilità](./Teoria%20della%20Probabilità)
 2. [Variabili Aleatorie](./Variabili%20Aleatorie)

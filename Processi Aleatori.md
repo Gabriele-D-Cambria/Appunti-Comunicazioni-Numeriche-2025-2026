@@ -410,7 +410,7 @@ Data la distribuzione di probabilità al primo ordine $f_X(x;t)$, in generale no
 Ad esempio, la _funzione valor medio_:
 $$
 \begin{align*}
-	\eta_Y(t) &= E\Set{Y(t)}
+	\eta_Y(t) &= E\Set{Y(t)} \\
 			  &= E\Set{X(t) \otimes h(t)} \\
 			  &= E\Set{\int{h(\alpha)X(t-\alpha)\;d\alpha}} \\
 			  &= \int{E\Set{h(\alpha)X(t-\alpha)\;d\alpha}} \\
@@ -536,7 +536,7 @@ $$
 P_Y = \int{S_Y(f)\;df} = \int{S_X(f)\vert H(f)\vert ^2\;df} = 2 \int_{\overline{f}-\Delta f/2}^{\overline{f}+\Delta f/2}{S_X(f)\;df}
 $$
 
-<img class="" src="./images/probability/proc-aleat/densita-spettr-potenza-filtro-bp.png">
+<img class="40" src="./images/probability/proc-aleat/densita-spettr-potenza-filtro-bp.png">
 
 Se riduciamo progressivamente la banda passante $\Delta f$ del filtro, possiamo approssimare $S_X(f)$ all'interno della banda come _una costante_, che ci permette di approssimare:
 $$

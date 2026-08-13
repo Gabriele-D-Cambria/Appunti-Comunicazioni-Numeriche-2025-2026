@@ -1539,7 +1539,7 @@ Nelle `16-PAM` la situazione è più complessa.
 Infatti non vale una simemtria totale come nel caso precedente, ma abbiamo tre probabilità diverse. Nell'immagine sotto è possibile visualizzare come queste sono distribuite.
 
 <figure class="">
-<img class="100" src="./images/comm-sys/qam/error-16-qam.png">
+<img class="75" src="./images/comm-sys/qam/error-16-qam.png">
 <figcaption>
 
 Simboli dello stesso colore hanno la stessa probabilità di errore

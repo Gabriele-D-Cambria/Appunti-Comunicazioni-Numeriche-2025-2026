@@ -39,7 +39,7 @@ $$
 
 </div>
 <div class="">
-<img class="80" src="./images/probability/va-systems/ddp-congiunta-graph.png">
+<img class="50" src="./images/probability/va-systems/ddp-congiunta-graph.png">
 </div>
 </div>
 
@@ -48,7 +48,7 @@ Le proprierà della funzione di distribuzione di probabilità congiunta sono le 
 $$
 \begin{align*}
 	& 0\le F_{XY}(x,y) \le 1 \\
-	& F_{XY}(x,y) \text{ funzione monotona non decrecente di ciascuna delle due variabili} \\
+	& F_{XY}(x,y) \qquad \text{ funzione monotona non decrecente di ciascuna delle due variabili} \\
 	& F_{XY}(-\infty, -\infty) = F_{XY}(-\infty, y) = F_{XY}(x, -\infty) = 0 \\
 	& F_{XY}(+\infty, +\infty) = 1
 \end{align*}
@@ -78,7 +78,7 @@ $$
 \large
 \begin{CD}
 	{
-		f_{XY}(x,y)dxdy = P(x < X \le x + dx, y < Y \le y + dy)
+		f_{XY}(x,y)\;dxdy = P(x < X \le x + dx, y < Y \le y + dy)
 	} \\
 	@VVV \\
 	\boxed{
@@ -90,7 +90,7 @@ $$
 Le _Densità Di Probabilità Marginali_ sono quindi:
 $$
 \begin{align*}
-	f_X(x) &= \int_{-\infty}^{\infty}{f_{XY}(x,y)\;dy} & \text{Variabile Aleatoria } X
+	f_X(x) &= \int_{-\infty}^{\infty}{f_{XY}(x,y)\;dy} & \text{Variabile Aleatoria } X \\
 	f_Y(y) &= \int_{-\infty}^{\infty}{f_{XY}(x,y)\;dx} & \text{Variabile Aleatoria } Y
 \end{align*}
 $$
@@ -277,7 +277,7 @@ $$
 $$
 
 <figure class="">
-<img class="100" src="./images/probability/va-systems/va-congiuntamente-gaussiane-3d-graph.png">
+<img class="75" src="./images/probability/va-systems/va-congiuntamente-gaussiane-3d-graph.png">
 <figcaption>
 
 Grafico del caso $\eta_X = \eta_Y = 0, \sigma_X = \sigma_Y = 1, \rho_{XY} = 0$
@@ -300,7 +300,7 @@ $$
 
 <div class="grid2">
 <div class="">
-<figure class="100">
+<figure class="80">
 <img class="100" src="./images/probability/va-systems/va-cong-gauss-ind.png">
 <figcaption>
 
@@ -309,7 +309,7 @@ Esempi con $\rho = 0$
 </figure>
 </div>
 <div class="">
-<figure class="90">
+<figure class="70">
 <img class="70" src="./images/probability/va-systems/va-cong-gauss-dip.png">
 <figcaption>
 
