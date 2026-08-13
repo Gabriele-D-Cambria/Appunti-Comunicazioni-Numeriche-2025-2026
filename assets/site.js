@@ -87,38 +87,6 @@ function setupDynamicHeader() {
 }
 
 // ============================================================================
-// MATHJAX CONFIGURATION
-// ============================================================================
-
-/**
- * Configurazione MathJax
- */
-window.MathJax = {
-    tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']],
-        processEscapes: true,
-        processEnvironments: true,
-        processRefs: true,
-        tags: 'none'
-    },
-    options: {
-        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-        processHtmlClass: 'tex2jax_process',
-        ignoreHtmlClass: 'tex2jax_ignore'
-    },
-    chtml: {
-        displayAlign: 'center',
-        displayIndent: '0em'
-    },
-    startup: {
-        ready() {
-            MathJax.startup.defaultReady();
-        }
-    }
-};
-
-// ============================================================================
 // INITIALIZATION
 // ============================================================================
 

@@ -67,18 +67,18 @@ Quello che accade quindi è che la `TCF` $X(f)$ di un segnale analogico viene **
 
 Assumendo di avere un segnale a _tempo continuo **limitato nella banda $B$**_.
 
-<img class="" src="./images/camp-and-inter/single-signal.png">
+<img class="30" src="./images/camp-and-inter/single-signal.png">
 
 Nell'ipotesi in cui lo campioniamo con una frequenza $f_c \ge 2B$, otteniamo che la frequenza viene replicata **_senza avere sovrapposizione tra le repliche_**.
 Questo significa che _**lo spettro in banda non viene distorto**_. Possiamo quindi dire di aver effettuato un **_buon campionamento_**.
 
-<img class="" src="./images/camp-and-inter/good-camp.png">
+<img class="30" src="./images/camp-and-inter/good-camp.png">
 
 Se invece campionassimo ad una frequenza $f_c \le 2B$, otteniamo tante frequenze replicate che **si sovrappongono tra di loro**.
 
 Questo segnale **_perde tutte le informazioni del segnale iniziale_**. In banda l'_aliasing_ rende _**lo spettro irriconoscibile in banda**_.
 
-<img class="" src="./images/camp-and-inter/bad-camp.png">
+<img class="30" src="./images/camp-and-inter/bad-camp.png">
 
 ## 2.2. Condizione di Nyquist
 
@@ -128,13 +128,13 @@ Applicano quindi un _filtro anti-aliasing_ che limita la banda a $15$ $kHz$, cos
 Definiamo _**Interpolatore a mantenimento**_ la funzione _rect_:
 $$
 \begin{matrix}
-	p(t) = \operatorname{rect}(\frac{t - T/2}{T}) & \Leftrightarrow & P(f) = T \operatorname{sinc}(fT)e^{-j\pi fT}
+	p(t) = \operatorname{rect}\Biggl(\frac{t - T/2}{T}\Biggr) & \Leftrightarrow & P(f) = T \operatorname{sinc}(fT)e^{-j\pi fT}
 \end{matrix}
 $$
 
 Se utilizziamo questo interpolatore il segnale ricostruito avrà la forma:
 $$
-	\hat{x}(t) = \sum_{n }{x[n]p(t-nT)} = \sum_{n}{x[n]\operatorname{rect}(\frac{t - T/2 - nT}{T})}
+	\hat{x}(t) = \sum_{n }{x[n]p(t-nT)} = \sum_{n}{x[n]\operatorname{rect}\Biggl(\frac{t - T/2 - nT}{T}\Biggr)}
 $$
 
 <img class="" src="./images/camp-and-inter/interpol-mantenimento.png">
@@ -191,7 +191,7 @@ Per evitare le distorsioni utilizziamo l'_**Interpolatore Cardinale**_:
 
 $$
 \begin{matrix}
-	P(f) = T\operatorname{rect}(fT) & \Leftrightarrow & p(t)) = \operatorname{sinc}(\frac{t}{T})
+	P(f) = T\operatorname{rect}(fT) & \Leftrightarrow & p(t) = \operatorname{sinc}(\frac{t}{T})
 \end{matrix}
 $$
 
@@ -226,7 +226,7 @@ Per aggirare questi problemi possiamo modificare le nostre funzioni.
 
 Ad esempio, per rendere la somma infinita una somma _finita_, è sufficiente **troncare l'interpolatore cardinale**:
 $$
-p_\Delta(t) = \operatorname{sinc}/\Bigl(\frac{t}{T}\Bigr)\operatorname{rect}\Bigl(\frac{t}{\Delta}\Bigr)
+p_\Delta(t) = \operatorname{sinc}\Bigl(\frac{t}{T}\Bigr)\operatorname{rect}\Bigl(\frac{t}{\Delta}\Bigr)
 $$
 
 <figure class="">
@@ -260,5 +260,4 @@ $$
 }
 $$
 
-È importante fare attenzione al fatto che l'introduzione del traslamento introduce un ritardo iniziale di $\Delta / 2$ nella ricostruzione del segnale
-
+È importante fare attenzione al fatto che l'introduzione del traslamento introduce un ritardo iniziale di $\Delta / 2$ nella ricostruzione del segnale.

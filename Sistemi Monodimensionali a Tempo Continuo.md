@@ -50,7 +50,6 @@ $$
 \cal{T}\mathnormal{[a_1x_1(\alpha) + a_2x_2(\alpha); t]} &= \cal{T}\mathnormal{[a_1x_1(\alpha); t]} + \cal{T}\mathnormal{[a_2x_2(\alpha); t]} \\
 &= a_1\cal{T}\mathnormal{[x_1(\alpha); t]} + a_2\cal{T}\mathnormal{[x_2(\alpha); t]} \\
 		&= a_1y_1(t) + a_2y_2(t)
-
 \end{align*}
 $$
 
@@ -200,7 +199,6 @@ $$
 {\dot V_u(t) = \frac{\dot q(t)}{C} = \frac{i(t)}{C}} \\
 @VVV \\
 {i(C) = C \cdot \dot V_u(t)}
-
 \end{CD}
 $$
 

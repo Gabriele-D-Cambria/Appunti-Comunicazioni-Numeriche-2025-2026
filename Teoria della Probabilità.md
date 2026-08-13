@@ -273,7 +273,7 @@ Ottenuto questo valore, la probabilità che accada che il condensatore non sia c
 
 ### 2.2.2. Esperimenti Casuali
 
-Utilizzeremo adessoo la **definizione assiomatica di probabilità**, che per specificare in modo corretto un **_esperimento casuale_** necessita che sia dato lo **_spazio di probabilità_** $(\Omega, S, P(\cdot))$.
+Utilizzeremo adesso la **definizione assiomatica di probabilità**, che per specificare in modo corretto un **_esperimento casuale_** necessita che sia dato lo **_spazio di probabilità_** $(\Omega, S, P(\cdot))$.
 
 Quando per un esperimento casuale si scelgie una particolare funzione di probabilità (che ovviamente soddisfi gli assiomi) si dice che si adotta un **_modello di probabilità_**.
 
@@ -369,7 +369,6 @@ $$
 	P[A_1 \cup A_2 \vert  B] = \frac{P[(A_1 \cup A_2) \vert  B]}{P[B]} &= \frac{P[(A_1 \cap B) \cup (A_2 \cap B)]}{P[B]} \\
 	&= \frac{P[A_1 \cap B] + P[A_2 \cap B]}{P[B]} \\
 	&= \frac{P[A_1 \cap B]}{P[B]} + \frac{P[A_2 \cap B]}{P[B]} \\
-
 \end{align*}
 $$
 
@@ -600,7 +599,7 @@ $$
 P((\xi_4, \lambda_4) \cup (\xi_5, \lambda_5)) = \frac{2}{36} = \frac{1}{18}
 $$
 
-Il secondo metodo, che si bassa sugli esperimenti indipendenti, permette il calcolo **anche nel caso di dadi truccati**.
+Il secondo metodo, che si basa sugli esperimenti indipendenti, permette il calcolo **anche nel caso di dadi truccati**.
 
 Verifichiamo comunque nel caso di dadi non truccati:
 $$

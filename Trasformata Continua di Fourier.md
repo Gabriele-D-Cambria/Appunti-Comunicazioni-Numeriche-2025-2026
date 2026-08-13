@@ -67,7 +67,7 @@ $$
 
 La _TCF_ si può applicare sia a $x(t) \in \R$ che a $x(t) \in \Complex$, e produrrà una $X(f) \in \Complex$. In alcuni casi particolari può comunque capitare che $X(f) \in \R$.
 
-La funzione $X(f)$, tiicamente complessa, può quindi essere espressa in notazione polare, scomponendosi in:
+La funzione $X(f)$, tipicamente complessa, può quindi essere espressa in notazione polare, scomponendosi in:
 $$
 	X(f) = \vert X(f)\vert \cdot e^{j\phase{X(f)}}
 $$
@@ -144,7 +144,7 @@ $$
 \begin{align*}
 X(f) &= \int_{-\infty}^{+\infty}{x(t)\cdot e^{-j2\pi ft}\;dt} \\
 	 &= \int_{-\frac{T}{2}}^{T \over 2}{e^{-j2\pi ft}\;dt} \\
-	 &= -\frac{e^{-j2\pi ft}}{j2\pi ft}\Biggr]_{-\frac{T_2}{2}}^{T \over 2} \\
+	 &= -\frac{e^{-j2\pi ft}}{j2\pi f}\Biggr|_{-\frac{T_2}{2}}^{T \over 2} \\
 	 &= -\frac{1}{j2\pi f} \cdot \Bigl(e^{-j\pi fT} - e^{j\pi fT}\Bigr) \\[1em]
 	 &= -\frac{1}{j2\pi f} \cdot \Bigl(-2j \sin{(\pi fT)}\Bigr) \\[1em]
 	 &= \frac{\sin{(\pi fT)}}{\pi f} \\[1em]
@@ -168,17 +168,16 @@ Per trovare la _TCF_ applichiamo la definizione:
 $$
 \begin{align*}
 	X(f) &= \int_0^{+\infty}{e^{-\frac{t}{T}} \cdot e^{-j2\pi ft}\;dt} \\
-		 &= \int_0^{+\infty}{e^{-t(\frac{t}{T} + j2\pi f)}\;dt} \\
-		 &= -\frac{e^{-t(\frac{t}{T} + j2\pi f)}}{\frac{1}{T} + j2\pi f}\Biggr]_0^{\infty} \\[1em]
+		 &= \int_0^{+\infty}{e^{-t(\frac{1}{T} + j2\pi f)}\;dt} \\
+		 &= -\frac{e^{-t(\frac{1}{T} + j2\pi f)}}{\frac{1}{T} + j2\pi f}\Biggr|_0^{\infty} \\[1em]
 		 &= \frac{T}{1 + j2\pi fT}
 \end{align*}
 $$
 
-Definendo $f_T := \frac{1}{2\pi T}$ otteninamo:
+Definendo $f_T := \frac{1}{2\pi T}$ otteniamo:
 $$
-X(f) = \frac{T}{1 + f/f_T}
+X(f) = \frac{T}{1 + jf/f_T}
 $$
-
 
 Per calcolarne il modulo ci basta fare il rapporto tra i moduli di numeratore e denominatore.
 
@@ -252,7 +251,7 @@ $$
 
 ## 2.4. Densità spettrale di potenza
 
-Per i segnali a potenza mediafinita si ha che:
+Per i segnali a potenza media finita si ha che:
 $$
 \begin{align*}
 	P_x = \lim_{T \to \infty}{\frac{E_{x_T}}{T}} &= \lim_{T\to\infty}{\int{\frac{\vert X(f)\vert ^2}{T}\;df}} \\
@@ -277,7 +276,7 @@ $$
 \Delta_t\cdot\Delta_f = \text{ costante}
 $$
 
-Inolte più un segnale varia velocemente nel tempo, meno saranno significative le componenti frequenziali che descrivono queste variazioni.
+Inoltre più un segnale varia velocemente nel tempo, meno saranno significative le componenti frequenziali che descrivono queste variazioni.
 
 Le componenti ad alta frequenza sono quindi **responsabili delle variazioni "veloci" del segnale**.
 
@@ -319,7 +318,7 @@ L'errore di questa approssimazione tende a $0$ quando $\Delta \to 0$.
 </div>
 </div>
 
-Se calcolassimo quindi la TCF in corrisponenza di una generica frequenza $kF$:
+Se calcolassimo quindi la TCF in corrispondenza di una generica frequenza $kF$:
 $$
 	X(kF) = \int{x(t)\cdot e^{-j2\pi kFt}} \approx T \sum_n{x(nT)\cdot e^{-j2\pi kF nT}}
 $$
@@ -342,7 +341,7 @@ $$
 
 Definendo la matrice $\bold{F}$ come:
 $$
-[\bold{F}]_{kn} = e^{-j2\pi kn FT}
+[\bold{F}|_{kn} = e^{-j2\pi kn FT}
 $$
 
 La complessità di calcolo della trasformata è pari a $O(KN) \rArr O(N^2)$.
@@ -384,7 +383,7 @@ $$
 \begin{matrix}
 	\bf{x} = \mathnormal{F}F^H\Chi \\
 	\\
-	[\bf{F}]_\mathnormal{kn} = \mathnormal{e^{-j2\pi knFT}}
+	[\bf{F}|_\mathnormal{kn} = \mathnormal{e^{-j2\pi knFT}}
 \end{matrix}
 $$
 

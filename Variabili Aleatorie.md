@@ -532,7 +532,7 @@ $$
 
 > Una variabile aleatoria $X \in U(a, b)$ è detta **_uniforme nell'intervallo_** $(a,b)$, se la sua $ddp$ è **_costante_** in quell'intervallo.
 
-Ad esempio, ipotiziamo la funzione:
+Ad esempio, ipotizziamo la funzione:
 $$
 f_X(x) = \begin{cases}
 	k & a \le x \le b \\
@@ -552,7 +552,7 @@ $$
 \begin{align*}
 	F_X(x) &= \int_{-\infty}^{x}{f_X(\alpha)\;d\alpha} \\[0.7em]
 		   &= 0 + \int_{a}^{x}{f_X(\alpha)\;d\alpha} \\[0.7em]
-		   &= \frac{x}{b-a}\Biggr]_{a}^{x} \\[0.7em]
+		   &= \frac{x}{b-a}\Biggr|_{a}^{x} \\[0.7em]
 		   &= \frac{x-a}{b-a}
 \end{align*}
 $$
@@ -1031,7 +1031,6 @@ P_X = E(X^2) =  \int_{-\infty}^{+\infty}{x^2f_X(x)\;dx} &= \dots = 2\lambda^2
 \\[1em]
 
 \sigma_X^2 = P_X - \eta_X^2 &= \lambda^2
-
 \end{align*}
 $$
 
@@ -1049,7 +1048,6 @@ P_X = E(X^2) =  \int_{-\infty}^{+\infty}{x^2f_X(x)\;dx} &= 2\Lambda^2
 \\[1em]
 
 \sigma_X^2 = P_X - \eta_X^2 &= \Lambda
-
 \end{align*}
 $$
 

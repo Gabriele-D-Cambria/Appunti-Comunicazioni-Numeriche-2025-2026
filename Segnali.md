@@ -189,7 +189,6 @@ $$
 \begin{align*}
 	P_x &= \lim_{T \to \infty}{\frac{1}{T} \cdot \int_{-{T \over 2}}^{T \over 2}{v_0^2\;dt}} \\
 	 &= v_0^2 \lim_{T\to\infty}{\frac{1}{T} \cdot T} = v_0^2
-
 \end{align*}
 $$
 
@@ -291,9 +290,7 @@ $$
 	\begin{cases}
 		c = 3 \cdot 10^8\;m/s & \text{Velocità della luce} \\
 		f_0 & \textbf{Frequenza Portante}
-
 	\end{cases}
-
 \end{CD}
 $$
 
@@ -335,14 +332,14 @@ $$
 \end{CD}
 $$
 
-Le due componendi periodiche sono le proiezioni sul piano complesso di $x(t)$, che rappresenta il vettore rotante in senso antiorario con velocità $f_0$. Questa velocità determina infatti la frequenza delle componenti.
+Le due componenti periodiche sono le proiezioni sul piano complesso di $x(t)$, che rappresenta il vettore rotante in senso antiorario con velocità $f_0$. Questa velocità determina infatti la frequenza delle componenti.
 
 
 Se provassimo a calcolarne l'energia:
 $$
 \begin{align*}
 	E(t) &= \int_{-{T_0 \over 2}}^{T_0 \over 2}{e^{j\pi f_0 t}\;dt} \\
-	\vdots \quad &= {\frac{e^{j\pi f_0 t}}{j \cdot \pi \cdot f_0} } \Biggr]_{-{T_0 \over 2}}^{T_0 \over 2} \\
+	\vdots \quad &= {\frac{e^{j\pi f_0 t}}{j \cdot \pi \cdot f_0} } \Biggr|_{-{T_0 \over 2}}^{T_0 \over 2} \\
 	\vdots \quad &= \frac{1}{\pi f_0} \cdot \Biggl(\frac{e^{j\cdot \pi f_0 T_0} - e^{-j \cdot \pi f_0 T_0}}{2j}\Biggr) \\
 	E(t) &= \frac{1}{\pi f_0} \cdot \sin{(\pi f_0 T_0)} = \frac{1}{\pi f_0} \cdot \sin{(\pi)} = 0
 \end{align*}
@@ -397,7 +394,6 @@ $$
 		P & \textbf{Potenza Misurata} \\
 		P_0 & \textbf{Potenza di Riferimento}
 	\end{cases}
-
 \end{CD}
 $$
 
@@ -469,7 +465,6 @@ $$
 \begin{matrix}
 	{P_r = \beta \cdot G_r \cdot G_t \cdot P_t} & \Leftrightarrow &
 	{P_r\;[dBm] = P_t\;[dBm] + G_r\;[dB] + G_t\;[dB] + \beta\;[dB]}
-
 \end{matrix}
 $$
 
@@ -479,7 +474,7 @@ Notiamo che se $G_r = G_t = 1 = 0\;[dB]$ otteniamo il caso **isotropico**.
 
 > Un sistema wireless opera a $3GHz$ e $5GHz$, con potenza trasmessa di $-20\;dBW$. La potenza ricevuta minima necessaria è pari a $-100\;dBW$, in condizioni di spazio libero.
 >
-> 1) Calcolare la massima distanza (in metri) tra il trasmettitore e il ricevitore per ciscuna frequenza
+> 1) Calcolare la massima distanza (in metri) tra il trasmettitore e il ricevitore per ciscuna frequenza <br>
 > 2) Con antenne da $10\;dBW$ di guadagno in trasmissione e ricezione, calcolare la nuova distanza massima
 
 Essendo in condizioni di spazio libero possiamo usare la relazione di Finn (in decibel):
@@ -516,7 +511,6 @@ $$
 		d_1 = \frac{\lambda_1 \cdot 10^4}{4\pi} = 79,58\;m \\[0.75em]
 		d_2 = \frac{\lambda_2 \cdot 10^4}{4\pi} = 47,75\;m
 	\end{cases}
-
 \end{CD}
 $$
 
@@ -524,7 +518,6 @@ Utilizzando le antenne con guadagno otteniamo che:
 $$
 \begin{CD}
 	{\beta' = P_r - P_t - G_r - G_t = -100\;dB} @>>> {\beta' = 10^{-10}\;W}
-	
 \end{CD}
 $$
 
@@ -562,7 +555,6 @@ $$
 	{snr = \frac{\text{Potenza del segnale ricevuto}}{\text{Potenza del rumore termico}} = \frac{P_r}{P_n}} \\
 	@VVV \\
 	{C = \log_2{(1+snr)}\;[b/s \cdot Hz]}
-
 \end{CD}
 $$
 
@@ -578,4 +570,3 @@ In particolare:
 | $30Ghz$ | $8 \cdot 10^{-12}\;W$ | $-110\;dBW$ |
 
 </div>
-
