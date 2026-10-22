@@ -1597,6 +1597,6 @@ La _**Probabilità di Errore nelle `16-QAM`**_:
 $$
 \Large
 \boxed{
-	P(e) = 3 Q\Biggl(\sqrt{\frac{1}{5} \frac{E_S}{\sqrt{N_0}}}\Biggr)
+	P(e) = 3 Q\left(\sqrt{\frac{1}{5}\cdot \frac{E_S}{N_0}}\right)
 }
 $$
